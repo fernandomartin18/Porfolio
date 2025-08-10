@@ -2,12 +2,16 @@ const themes = {
   light: {
     background: '#f6f8fa',
     text: '#222',
-    navbar: '#fff',
+    navbar: '#fafadaff',
+    navbarText: '#222',
+    navbarShadow: '0 2px 16px rgba(0,0,0,0.08)',
   },
   dark: {
     background: '#181a1b',
     text: '#f6f8fa',
-    navbar: '#222',
+    navbar: '#323232ff',
+    navbarText: '#f6f8fa',
+    navbarShadow: '0 2px 16px rgba(54, 54, 54, 0.33)',
   },
 }
 

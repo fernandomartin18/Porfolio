@@ -4,41 +4,6 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.navbar ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li {
-  cursor: pointer;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.theme-btn {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  margin-left: 1rem;
-}
-
 .section {
   min-height: 100vh;
   padding: 6rem 2rem 2rem 2rem;
@@ -46,6 +11,7 @@ body {
   scroll-margin-top: 5rem;
   transition: background 0.3s, color 0.3s;
 }
+
 
 @media (max-width: 700px) {
   .navbar {
@@ -59,5 +25,11 @@ body {
   }
   .section {
     padding: 7rem 1rem 2rem 1rem;
+  }
+  .custom-navbar {
+    max-width: 98vw;
+    margin: 0.5rem auto 0 auto;
+    border-radius: 1rem;
+    padding: 0.5rem;
   }
 }
