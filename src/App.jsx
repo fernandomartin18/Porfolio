@@ -51,6 +51,7 @@ function App() {
   document.body.style.backgroundImage = themes[theme].gradientBg
   document.body.style.backgroundSize = 'cover'
   document.body.style.backgroundRepeat = 'no-repeat'
+  document.body.style.overscrollBehavior = 'none' // Desactiva overscroll
   document.documentElement.style.setProperty('--navbar-bg', themes[theme].navbar + 'cc')
   document.documentElement.style.setProperty('--navbar-text', themes[theme].navbarText)
   document.documentElement.style.setProperty('--navbar-shadow', themes[theme].navbarShadow)
