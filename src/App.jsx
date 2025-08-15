@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
-import './App.css'
-import themes from './themes'
-import Navbar from './Navbar'
+import './css/App.css'
+import themes from './styles/themes'
+import Navbar from './components/Navbar'
 
 function App() {
   const getPreferredTheme = () =>
@@ -52,6 +52,8 @@ function App() {
   document.body.style.backgroundSize = 'cover'
   document.body.style.backgroundRepeat = 'no-repeat'
   document.body.style.overscrollBehavior = 'none' // Desactiva overscroll
+  document.body.style.transition = 'background 0.5s, color 0.5s' // Transición suave
+  document.documentElement.style.transition = 'background 0.5s, color 0.5s' // Transición raíz
   document.documentElement.style.setProperty('--navbar-bg', themes[theme].navbar + 'cc')
   document.documentElement.style.setProperty('--navbar-text', themes[theme].navbarText)
   document.documentElement.style.setProperty('--navbar-shadow', themes[theme].navbarShadow)

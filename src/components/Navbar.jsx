@@ -1,5 +1,5 @@
 import React from 'react'
-import './Navbar.css'
+import '../css/Navbar.css'
 
 function Navbar({ theme, toggleTheme, scrollToSection, themes, activeSection }) {
   const isMobile = window.innerWidth < 500
