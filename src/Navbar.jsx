@@ -1,7 +1,7 @@
 import React from 'react'
 import './Navbar.css'
 
-function Navbar({ theme, toggleTheme, scrollToSection, themes }) {
+function Navbar({ theme, toggleTheme, scrollToSection, themes, activeSection }) {
   const isMobile = window.innerWidth < 500
   const iconSrc = theme === 'light' ? './public/dark.png' : './public/light.png'
   const iconColor = themes[theme].navbarText
@@ -9,13 +9,36 @@ function Navbar({ theme, toggleTheme, scrollToSection, themes }) {
   return (
     <nav className="navbar custom-navbar">
       <ul>
-        <li onClick={() => scrollToSection('inicio')}>Inicio</li>
-        <li onClick={() => scrollToSection('proyectos')}>Proyectos</li>
-        <li onClick={() => scrollToSection('experiencia')}>
+        <li
+          className={activeSection === 'inicio' ? 'active' : ''}
+          onClick={() => scrollToSection('inicio')}
+        >
+          Inicio
+        </li>
+        <li
+          className={activeSection === 'proyectos' ? 'active' : ''}
+          onClick={() => scrollToSection('proyectos')}
+        >
+          Proyectos
+        </li>
+        <li
+          className={activeSection === 'experiencia' ? 'active' : ''}
+          onClick={() => scrollToSection('experiencia')}
+        >
           {isMobile ? 'Exp.' : 'Experiencia'}
         </li>
-        <li onClick={() => scrollToSection('sobreMi')}>Sobre Mí</li>
-        <li onClick={() => scrollToSection('contacto')}>Contacto</li>
+        <li
+          className={activeSection === 'sobreMi' ? 'active' : ''}
+          onClick={() => scrollToSection('sobreMi')}
+        >
+          Sobre Mí
+        </li>
+        <li
+          className={activeSection === 'contacto' ? 'active' : ''}
+          onClick={() => scrollToSection('contacto')}
+        >
+          Contacto
+        </li>
         <li>
           <button className="theme-btn" onClick={toggleTheme}>
             <img

@@ -7,15 +7,16 @@
   z-index: 100;
   display: block;
   padding: 0.5rem 2rem;
-  box-shadow: var(--navbar-shadow, 0 2px 16px rgba(0,0,0,0.08));
+  box-shadow: var(--navbar-shadow, 0 2px 16px rgba(0, 0, 0, 0.307));
   border-radius: 1.5rem;
   margin: 1rem auto 0 auto;
   width: fit-content;
   max-width: none;
   background: var(--navbar-bg, #fffccc);
   color: var(--navbar-text, #222);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(142, 141, 141, 0.35);
 }
 
 .custom-navbar ul {
@@ -36,6 +37,10 @@
   color: inherit;
   display: flex;
   align-items: center;
+}
+
+.custom-navbar li.active {
+  color: var(--navbar-active, #ff9c1a);
 }
 
 .theme-btn {

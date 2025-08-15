@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import './App.css'
 import themes from './themes'
 import Navbar from './Navbar'
@@ -8,6 +8,7 @@ function App() {
     window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
 
   const [theme, setTheme] = useState(getPreferredTheme())
+  const [activeSection, setActiveSection] = useState('inicio')
   const sections = {
     inicio: useRef(null),
     proyectos: useRef(null),
@@ -24,14 +25,39 @@ function App() {
     setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionKeys = Object.keys(sections)
+      let current = sectionKeys[0]
+      for (let key of sectionKeys) {
+        const ref = sections[key].current
+        if (ref) {
+          const rect = ref.getBoundingClientRect()
+          if (rect.top <= 80 && rect.bottom > 80) {
+            current = key
+            break
+          }
+        }
+      }
+      setActiveSection(current)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [sections])
+
   // Aplicar tema al body y variables CSS para el navbar
   document.body.style.color = themes[theme].text
-  document.body.style.backgroundImage = themes[theme].gradientBg // Añade esta línea
-  document.body.style.backgroundSize = 'cover' // Opcional para asegurar que cubra todo
-  document.body.style.backgroundRepeat = 'no-repeat' // Opcional
+  document.body.style.backgroundImage = themes[theme].gradientBg
+  document.body.style.backgroundSize = 'cover'
+  document.body.style.backgroundRepeat = 'no-repeat'
   document.documentElement.style.setProperty('--navbar-bg', themes[theme].navbar + 'cc')
   document.documentElement.style.setProperty('--navbar-text', themes[theme].navbarText)
   document.documentElement.style.setProperty('--navbar-shadow', themes[theme].navbarShadow)
+  document.documentElement.style.setProperty(
+    '--navbar-active',
+    themes[theme].navbarActive
+  )
 
   return (
     <>
@@ -40,6 +66,7 @@ function App() {
         toggleTheme={toggleTheme}
         scrollToSection={scrollToSection}
         themes={themes}
+        activeSection={activeSection}
       />
       <section ref={sections.inicio} className="section inicio">
         <h1>Inicio</h1>
