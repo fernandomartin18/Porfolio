@@ -123,7 +123,7 @@
 
 @media (max-width: 500px) {
   .inicio-container {
-    margin-top: 0px;
+    margin-top: -15px;
   }
   .inicio-row-desktop {
     display: none !important;
@@ -156,5 +156,9 @@
   }
   .inicio-titulo {
     font-size: 2rem;
+  }
+  .inicio-descripcion {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
   }
 }
