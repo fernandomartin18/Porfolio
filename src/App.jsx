@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from 'react'
 import './css/App.css'
 import themes from './styles/themes'
 import Navbar from './components/Navbar'
+import Inicio from './components/Inicio'
 
 function App() {
   const getPreferredTheme = () =>
@@ -57,10 +58,9 @@ function App() {
   document.documentElement.style.setProperty('--navbar-bg', themes[theme].navbar + 'cc')
   document.documentElement.style.setProperty('--navbar-text', themes[theme].navbarText)
   document.documentElement.style.setProperty('--navbar-shadow', themes[theme].navbarShadow)
-  document.documentElement.style.setProperty(
-    '--navbar-active',
-    themes[theme].navbarActive
-  )
+  document.documentElement.style.setProperty('--primary', themes[theme].primary)
+  document.documentElement.style.setProperty('--foto-shadow', themes[theme].fotoShadow)
+  document.documentElement.style.setProperty('--text', themes[theme].text)
 
   return (
     <>
@@ -72,9 +72,7 @@ function App() {
         activeSection={activeSection}
       />
       <section ref={sections.inicio} className="section inicio">
-        <h1>Inicio</h1>
-        {/* ...contenido de inicio... */}
-        <p>Bienvenido a mi portafolio000ssssssssssssssssssssss00000</p>
+        <Inicio />
       </section>
       <section ref={sections.proyectos} className="section proyectos">
         <h1>Proyectos</h1>

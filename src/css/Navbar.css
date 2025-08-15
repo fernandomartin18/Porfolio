@@ -40,7 +40,7 @@
 }
 
 .custom-navbar li.active {
-  color: var(--navbar-active, #ff9c1a);
+  color: var(--primary);
 }
 
 .theme-btn {
