@@ -12,7 +12,16 @@ body {
   padding: 2rem 2rem 2rem 2rem;
   box-sizing: border-box;
   scroll-margin-top: 5rem;
-  transition: background 0.3s, color 0.3s;
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: opacity, transform;
+  transition: background 0.3s, color 0.3s, opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+
+.section.section-visible,
+.section-visible.section {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 
 

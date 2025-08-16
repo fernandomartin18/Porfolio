@@ -27,6 +27,35 @@ function App() {
     setTheme(theme === 'light' ? 'dark' : 'light')
   }
 
+  // Visibilidad animada de cada sección
+  const [visibleSections, setVisibleSections] = useState({})
+
+  useEffect(() => {
+    const sectionKeys = Object.keys(sections)
+    const handleIntersection = (entries) => {
+      setVisibleSections((prev) => {
+        const updated = { ...prev }
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            updated[entry.target.dataset.section] = true
+          }
+        })
+        return updated
+      })
+    }
+    const observer = new window.IntersectionObserver(handleIntersection, {
+      threshold: 0.15,
+    })
+    sectionKeys.forEach((key) => {
+      const ref = sections[key].current
+      if (ref) {
+        ref.dataset.section = key
+        observer.observe(ref)
+      }
+    })
+    return () => observer.disconnect()
+  }, [sections])
+
   useEffect(() => {
     const handleScroll = () => {
       const sectionKeys = Object.keys(sections)
@@ -196,10 +225,16 @@ function App() {
         themes={themes}
         activeSection={activeSection}
       />
-      <section ref={sections.inicio} className="section inicio">
+      <section
+        ref={sections.inicio}
+        className={`section inicio${visibleSections.inicio ? ' section-visible' : ''}`}
+      >
         <Inicio />
       </section>
-      <section ref={sections.proyectos} className="section proyectos">
+      <section
+        ref={sections.proyectos}
+        className={`section proyectos${visibleSections.proyectos ? ' section-visible' : ''}`}
+      >
         <div className="proyectos-container">
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '2rem', marginTop: '2rem' }}>
             <img src="./developer.png" alt="Icono Proyectos" style={{ width: '32px', height: '32px', filter: theme === 'light' ? 'invert(1)' : 'none' }} />
@@ -217,15 +252,24 @@ function App() {
           ))}
         </div>
       </section>
-      <section ref={sections.experiencia} className="section experiencia">
+      <section
+        ref={sections.experiencia}
+        className={`section experiencia${visibleSections.experiencia ? ' section-visible' : ''}`}
+      >
         <h1>Experiencia</h1>
         {/* ...contenido de experiencia... */}
       </section>
-      <section ref={sections.sobreMi} className="section sobreMi">
+      <section
+        ref={sections.sobreMi}
+        className={`section sobreMi${visibleSections.sobreMi ? ' section-visible' : ''}`}
+      >
         <h1>Sobre Mí</h1>
         {/* ...contenido sobre mí... */}
       </section>
-      <section ref={sections.contacto} className="section contacto">
+      <section
+        ref={sections.contacto}
+        className={`section contacto${visibleSections.contacto ? ' section-visible' : ''}`}
+      >
         <h1>Contacto</h1>
         {/* ...contenido de contacto... */}
       </section>
