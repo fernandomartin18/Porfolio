@@ -8,6 +8,8 @@ const themes = {
     gradientBg: 'radial-gradient(ellipse 180% 180% at 50% -10%, #a29ff6c6, #ffffffff 50%)',
     primary: '#06b9a7ff',
     fotoShadow: '0 4px 16px 0 rgba(0,0,0,0.15)',
+    cardShadow: '0 4px 16px 0 rgba(0,0,0,0.15)',
+    cardBackground: '#fafadaffcc',
   },
   dark: {
     background: '#181a1b',
@@ -18,6 +20,8 @@ const themes = {
     gradientBg: 'radial-gradient(ellipse 180% 150% at 50% -10%, #18013eff, #000000ff 50%)',
     primary: '#40e0d0',
     fotoShadow: '0 4px 16px 0 rgba(255, 255, 255, 0.41)',
+    cardShadow: '0 4px 16px 0 rgba(176, 174, 174, 0.1)',
+    cardBackground: '#3a324a66',
   },
 }
 

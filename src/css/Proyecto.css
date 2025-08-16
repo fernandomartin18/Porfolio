@@ -1,0 +1,135 @@
+.proyecto-card {
+  display: flex;
+  flex-direction: row;
+  background: var(--card-background, #fff);
+  border-radius: 1.5rem;
+  box-shadow: var(--card-shadow, 0 2px 16px 0 rgba(0,0,0,0.08));
+  overflow: hidden;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.2s;
+  align-items: stretch;
+}
+
+.proyecto-img-link {
+  display: block;
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.proyecto-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 0 0 0 1.5rem;
+  display: block;
+}
+
+.proyecto-content {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  gap: 1rem;
+}
+
+.proyecto-titulo-link {
+  text-decoration: none;
+  color: var(--text, #222);
+}
+
+.proyecto-titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: inherit;
+}
+
+.proyecto-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.proyecto-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 1rem;
+  border-radius: 1.2rem;
+  background: transparent;
+  color: var(--text, #222);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid var(--primary, #00e0ff);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+  user-select: none;
+  pointer-events: none;
+}
+
+.proyecto-tag-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 0.3em;
+}
+
+.proyecto-desc-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.proyecto-descripcion {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text, #222);
+  line-height: 1.6;
+}
+
+.proyectos-container {
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+@media (max-width: 700px) {
+  .proyecto-card {
+    flex-direction: column;
+    border-radius: 1.2rem;
+  }
+  .proyecto-img-link {
+    flex: none;
+    width: 100%;
+  }
+  .proyecto-img {
+    border-radius: 1.2rem 1.2rem 0 0;
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
+  }
+  .proyecto-content {
+    padding: 1.2rem 1rem 1.2rem 1rem;
+    gap: 0.7rem;
+  }
+  .proyecto-titulo {
+    font-size: 1.2rem;
+  }
+  .proyecto-tag {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.8rem;
+  }
+  .proyecto-descripcion {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .proyectos-container {
+    max-width: 100%;
+    padding: 0 0px;
+  }
+}
