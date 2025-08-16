@@ -3,7 +3,7 @@ import '../css/Inicio.css'
 export default function Inicio() {
   return (
     <div className="inicio-container">
-      {/* Estructura escritorio */}
+      {/* Escritorio */}
       <div className="inicio-row inicio-row-desktop">
         <img
           src="/FotoProfesional.jpeg"
@@ -25,7 +25,7 @@ export default function Inicio() {
           </div>
         </div>
       </div>
-      {/* Estructura móvil */}
+      {/* Móvil */}
       <div className="inicio-row inicio-row-mobile">
         <div className="inicio-foto-btn-row">
           <img

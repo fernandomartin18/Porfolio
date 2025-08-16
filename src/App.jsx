@@ -47,14 +47,14 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [sections])
 
-  // Aplicar tema al body y variables CSS para el navbar
+  // Aplicar tema al body y variables CSS
   document.body.style.color = themes[theme].text
   document.body.style.backgroundImage = themes[theme].gradientBg
   document.body.style.backgroundSize = 'cover'
   document.body.style.backgroundRepeat = 'no-repeat'
-  document.body.style.overscrollBehavior = 'none' // Desactiva overscroll
-  document.body.style.transition = 'background 0.5s, color 0.5s' // Transición suave
-  document.documentElement.style.transition = 'background 0.5s, color 0.5s' // Transición raíz
+  document.body.style.overscrollBehavior = 'none'
+  document.body.style.transition = 'background 0.5s, color 0.5s'
+  document.documentElement.style.transition = 'background 0.5s, color 0.5s'
   document.documentElement.style.setProperty('--navbar-bg', themes[theme].navbar + 'cc')
   document.documentElement.style.setProperty('--navbar-text', themes[theme].navbarText)
   document.documentElement.style.setProperty('--navbar-shadow', themes[theme].navbarShadow)

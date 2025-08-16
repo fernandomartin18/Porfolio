@@ -37,6 +37,8 @@
   color: inherit;
   display: flex;
   align-items: center;
+  white-space: nowrap;
+
 }
 
 .custom-navbar li.active {
@@ -52,21 +54,23 @@
 
 @media (max-width: 500px) {
   .custom-navbar {
-    width: calc(100vw - 2rem);
-    max-width: calc(100vw - 2rem);
-    left: 0.5rem;
-    right: 0.5rem;
+    box-sizing: border-box;
+    width: calc(100vw - 1rem);
+    max-width: calc(100vw - 1rem);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    left: 0;
+    right: 0;
     transform: none;
-    margin: 0.5rem auto 0 auto;
     border-radius: 1.5rem;
-    padding: 0.5rem;
   }
   .custom-navbar ul {
     flex-direction: row;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 0.8rem;
   }
   .custom-navbar li {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
   .theme-btn img {
     width: 1.2rem;

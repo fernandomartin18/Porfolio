@@ -113,7 +113,6 @@
   color: var(--primary, #00e0ff);
 }
 
-/* Por defecto, solo muestra escritorio */
 .inicio-row-mobile {
   display: none;
 }
@@ -140,7 +139,6 @@
     align-items: flex-start;
     gap: 1.2rem;
   }
-  /* Agrupa foto y botón en una fila centrada verticalmente */
   .inicio-foto-btn-row {
     display: flex;
     flex-direction: row;
