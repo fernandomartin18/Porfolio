@@ -1,0 +1,206 @@
+.experiencia-container {
+  width: 100%;
+  max-width: 840px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.experiencia-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2rem;
+}
+
+.experiencia-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.experiencia-titulo {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.experiencia-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 0 2.5rem;
+  align-items: stretch;
+  position: relative;
+}
+
+.experiencia-timeline {
+  grid-row: 1 / span 2;
+  grid-column: 1;
+  position: relative;
+  width: 48px;
+  min-width: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* La altura se controla inline desde el componente */
+}
+
+.experiencia-line {
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  background: var(--primary, #00e0ff);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  z-index: 0;
+  /* La altura y top se controlan inline desde el componente */
+}
+
+.experiencia-dot {
+  position: absolute;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background: var(--primary, #00e0ff);
+  border-radius: 50%;
+  border: 3px solid var(--text, #fff);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+
+.experiencia-items {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  width: 100%;
+}
+
+.experiencia-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.experiencia-item-height {
+  min-height: 90px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0;
+}
+
+.experiencia-info-main {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2.5rem;
+  width: 100%;
+  align-items: center;
+}
+
+.experiencia-puesto {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary, #00e0ff);
+  
+}
+
+.experiencia-empresa {
+  font-size: 1.1rem;
+  color: var(--text, #222);
+  font-weight: 600;
+  margin-top: 0.2rem;
+}
+
+.experiencia-fecha {
+  font-size: 0.95rem;
+  color: var(--text, #888);
+  margin-top: 0.2rem;
+}
+
+.experiencia-descripcion {
+  font-size: 1.1rem;
+  color: var(--text, #222);
+  line-height: 1.6;
+  margin-left: 0;
+  margin-top: 0.1rem;
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .experiencia-list {
+    grid-template-columns: 32px 1fr;
+    gap: 0 1.2rem;
+  }
+  .experiencia-timeline {
+    width: 32px;
+    min-width: 32px;
+  }
+  .experiencia-dot {
+    width: 12px;
+    height: 12px;
+  }
+  .experiencia-item-height {
+    min-height: 70px;
+    margin-bottom: 1.1rem;
+  }
+  .experiencia-info-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: stretch;
+  }
+  .experiencia-descripcion {
+    margin-left: 0;
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  .experiencia-items {
+    gap: 2.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .experiencia-container {
+    max-width: 100%;
+    padding: 0 0px;
+  }
+  .experiencia-header {
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .experiencia-list {
+    grid-template-columns: 24px 1fr;
+    gap: 0 0.7rem;
+  }
+  .experiencia-timeline {
+    width: 24px;
+    min-width: 24px;
+  }
+  .experiencia-dot {
+    width: 10px;
+    height: 10px;
+  }
+  .experiencia-item-height {
+    min-height: 56px;
+    margin-bottom: 0.7rem;
+  }
+  .experiencia-info-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+  .experiencia-descripcion {
+    margin-left: 0;
+    margin-top: 0.7rem;
+    font-size: 0.97rem;
+  }
+  .experiencia-items {
+    gap: 1.3rem;
+  }
+}
