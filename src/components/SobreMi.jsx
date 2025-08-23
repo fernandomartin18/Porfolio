@@ -5,13 +5,13 @@ export default function SobreMi() {
     <div className="sobre-mi-content">
       <div className="sobre-mi-text">
         <p>
-          Soy un desarrollador apasionado por la tecnología y la innovación. Me encanta aprender nuevas herramientas y lenguajes para crear soluciones eficientes y creativas.
+          Me llamo <span className="primary-text">Fernando Martín</span> y desde siempre me ha fascinado cómo la tecnología puede transformar ideas en realidades. La <span className="primary-text">programación</span> se ha convertido en mi forma de dar vida a <span className="primary-text">proyectos</span> que combinan creatividad, lógica y utilidad en el día a día.
         </p>
         <p>
-          Tengo experiencia en desarrollo web, tanto en frontend como en backend, y disfruto trabajando en proyectos colaborativos donde puedo aportar mis conocimientos y seguir creciendo profesionalmente.
+          Trabajo con lenguajes como Java, JavaScript y Python, pero lo que más me gusta es desarrollar <span className="primary-text">aplicaciones web y móvil</span>, para lo que uso mayoritariamente React. Lo que más disfruto es construir herramientas que simplifiquen, conecten y <span className="primary-text">generen impacto positivo</span>.
         </p>
         <p>
-          Fuera del código, me gusta la fotografía, la música y explorar nuevas ideas que me inspiren a seguir mejorando cada día.
+          Soy una <span className="primary-text">persona curiosa y constante</span>, siempre abierta a aprender de cada reto y de las personas con las que <span className="primary-text">colaboro</span>. La música y los gatos son la mejor compañía en mis horas de código.
         </p>
       </div>
       <div className="sobre-mi-foto">

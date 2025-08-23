@@ -97,6 +97,7 @@ function App() {
   document.documentElement.style.setProperty('--text', themes[theme].text)
   document.documentElement.style.setProperty('--card-shadow', themes[theme].cardShadow)
   document.documentElement.style.setProperty('--card-background', themes[theme].cardBackground)
+  document.documentElement.style.setProperty('--foto-sombra-sobre-mi', theme === 'dark' ? '#288d83ff' : themes[theme].primary)
 
   return (
     <>
