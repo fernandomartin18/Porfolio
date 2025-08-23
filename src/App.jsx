@@ -75,6 +75,12 @@ function App() {
           }
         }
       }
+      // Cerca del final de la página, navbar activa contacto
+      const scrollPosition = window.innerHeight + window.scrollY
+      const threshold = 50 // píxeles desde el fondo
+      if (document.body.offsetHeight - scrollPosition < threshold) {
+        current = 'contacto'
+      }
       setActiveSection(current)
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
