@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Inicio from './components/Inicio'
 import Proyecto from './components/Proyecto'
 import Experiencia from './components/Experiencia'
+import SobreMi from './components/SobreMi'
 import proyectos from './constantes/proyectos'
 import experiencias from './constantes/experiencias'
 
@@ -143,8 +144,13 @@ function App() {
         ref={sections.sobreMi}
         className={`section sobreMi${visibleSections.sobreMi ? ' section-visible' : ''}`}
       >
-        <h1>Sobre Mí</h1>
-        {/* ...contenido sobre mí... */}
+        <div className="proyectos-container">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '2rem', marginTop: '2rem' }}>
+            <img src="./sobremi.png" alt="Icono Sobre Mí" style={{ width: '32px', height: '32px', filter: theme === 'dark' ? 'invert(1)' : 'none' }} />
+            <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: 0 }}>Sobre Mí</h1>
+          </div>
+          <SobreMi />
+        </div>
       </section>
       <section
         ref={sections.contacto}

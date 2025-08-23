@@ -50,7 +50,7 @@ export default function Inicio() {
       <p className="inicio-descripcion">
           Soy <b className="primary-bold">estudiante de cuarto año de Ingeniería Informática</b>.
           Me especializo en el <b className="primary-bold">desarrollo web</b> y de <b className="primary-bold">aplicaciones móviles</b>.
-          Disfruto enfrentar desafíos que me permitan aprender continuamente y aplicar mis conocimientos para ofreceer soluciones.
+          Disfruto enfrentar desafíos que me permitan aprender continuamente y aplicar mis conocimientos para ofrecer soluciones.
       </p>
     </div>
   )
