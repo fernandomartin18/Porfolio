@@ -6,6 +6,7 @@ import Inicio from './components/Inicio'
 import Proyecto from './components/Proyecto'
 import Experiencia from './components/Experiencia'
 import SobreMi from './components/SobreMi'
+import Contacto from './components/Contacto'
 import proyectos from './constantes/proyectos'
 import experiencias from './constantes/experiencias'
 
@@ -157,8 +158,13 @@ function App() {
         ref={sections.contacto}
         className={`section contacto${visibleSections.contacto ? ' section-visible' : ''}`}
       >
-        <h1>Contacto</h1>
-        {/* ...contenido de contacto... */}
+        <div className="proyectos-container">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '2rem', marginTop: '2rem' }}>
+            <img src="./contacto.png" alt="Icono Contacto" style={{ width: '32px', height: '32px', filter: theme === 'dark' ? 'invert(1)' : 'none' }} />
+            <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: 0 }}>Contacto</h1>
+          </div>
+          <Contacto theme={theme} />
+        </div>
       </section>
     </>
   )
