@@ -31,6 +31,14 @@ function App() {
   document.documentElement.style.setProperty('--card-shadow', themes[theme].cardShadow)
   document.documentElement.style.setProperty('--card-background', themes[theme].cardBackground)
   document.documentElement.style.setProperty('--foto-sombra-sobre-mi', theme === 'dark' ? '#288d83ff' : themes[theme].primary)
+  // Resplandor para LoveStory
+  if (theme === 'dark') {
+    document.documentElement.style.setProperty('--lovestory-glow', 'rgba(197, 64, 224, 0)')
+    document.documentElement.style.setProperty('--lovestory-glow-strong', '#bdc1fe8a')
+  } else {
+    document.documentElement.style.setProperty('--lovestory-glow', 'rgba(249, 246, 250, 0)')
+    document.documentElement.style.setProperty('--lovestory-glow-strong', '#f8f6fa')
+  }
 
   return (
     <Routes>
