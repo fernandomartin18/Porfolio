@@ -1,16 +1,24 @@
 import { useRef, useState, useEffect } from 'react'
 import '../css/Proyecto.css'
+import { Link } from 'react-router-dom'
 
 export default function Proyecto({ foto, enlace, titulo, tags, descripcion }) {
+  const isInternal = enlace.startsWith('/')
+
+  const LinkOrA = isInternal ? Link : 'a'
+  const linkProps = isInternal
+    ? { to: enlace }
+    : { href: enlace, target: '_blank', rel: 'noopener noreferrer' }
+
   return (
     <div className="proyecto-card">
-      <a href={enlace} target="_blank" rel="noopener noreferrer" className="proyecto-img-link">
+      <LinkOrA {...linkProps} className="proyecto-img-link">
         <img src={foto} alt={titulo} className="proyecto-img" />
-      </a>
+      </LinkOrA>
       <div className="proyecto-content">
-        <a href={enlace} target="_blank" rel="noopener noreferrer" className="proyecto-titulo-link">
+        <LinkOrA {...linkProps} className="proyecto-titulo-link">
           <h2 className="proyecto-titulo">{titulo}</h2>
-        </a>
+        </LinkOrA>
         <div className="proyecto-tags">
           {tags.map((tag, i) => (
             <span className="proyecto-tag" key={i}>
@@ -23,9 +31,9 @@ export default function Proyecto({ foto, enlace, titulo, tags, descripcion }) {
             </span>
           ))}
         </div>
-        <a href={enlace} target="_blank" rel="noopener noreferrer" className="proyecto-desc-link">
+        <LinkOrA {...linkProps} className="proyecto-desc-link">
           <p className="proyecto-descripcion">{descripcion}</p>
-        </a>
+        </LinkOrA>
       </div>
     </div>
   )

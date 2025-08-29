@@ -104,7 +104,7 @@ const iconos = {
 
 const proyectos = [
   {
-    foto: './FotoCasual.jpg',
+    foto: './catture.jpg',
     enlace: 'https://catture.github.io/',
     titulo: 'Catture',
     tags: [
@@ -115,8 +115,8 @@ const proyectos = [
     descripcion: 'Aplicación móvil que sirve de red social para compartir con tus seguidores fotos de los gatos que has encontrado por la calle.',
   },
   {
-    foto: './FotoCasual.jpg',
-    enlace: 'https://proyecto2.com',
+    foto: './lovestory.jpg',
+    enlace: '/lovestory',
     titulo: 'LoveStory',
     tags: [
       { nombre: 'React', icono: iconos.react },
@@ -126,7 +126,7 @@ const proyectos = [
     descripcion: 'Aplicación móvil en la que cada miembro de una pareja puede crear y ver recuerdos (un conjunto de fotos con descripción).',
   },
   {
-    foto: './FotoCasual.jpg',
+    foto: './buscadorpeliculas.jpg',
     enlace: 'https://buscapelis.surge.sh/',
     titulo: 'Buscador de Películas',
     tags: [
@@ -136,7 +136,7 @@ const proyectos = [
     descripcion: 'Aplicación web para buscar películas utilizando una API externa que devuelve resultados basados en los criterios de búsqueda.',
   },
   {
-    foto: './FotoCasual.jpg',
+    foto: './traductor.jpg',
     enlace: 'https://traductor.surge.sh/',
     titulo: 'Traductor con IA',
     tags: [
