@@ -3,7 +3,7 @@ import '../css/Navbar.css'
 
 function Navbar({ theme, toggleTheme, scrollToSection, themes, activeSection }) {
   const isMobile = window.innerWidth < 500
-  const iconSrc = theme === 'light' ? './public/dark.png' : './public/light.png'
+  const iconSrc = theme === 'light' ? './dark.png' : './light.png'
   const iconColor = themes[theme].navbarText
 
   return (
