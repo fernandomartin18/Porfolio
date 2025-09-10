@@ -1,9 +1,9 @@
 const experiencias = [
   {
-    puesto: 'Lorem Ipsum Dolor',
+    puesto: 'Desarrollador Web',
     empresa: 'EBORATIC',
     fecha: 'Sep 2025 - Actualidad',
-    descripcion: '(Inventado) Responsable del desarrollo y mantenimiento de aplicaciones web modernas utilizando React, Node.js y MongoDB.',
+    descripcion: 'Responsable del desarrollo y mantenimiento de aplicaciones web corporativas y de eventos vinculados a la empresa, utilizando tecnologías como JavaScript y frameworks modernos.',
   },
   {
     puesto: 'Becario de Desarrollo de Software',
