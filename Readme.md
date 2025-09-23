@@ -2,6 +2,10 @@
 
 Este proyecto es un portafolio web moderno desarrollado con React, diseñado para mostrar la experiencia, proyectos y habilidades de manera profesional y atractiva.
 
+## 🌐 Web
+
+Accede al Porfolio pulsando [aquí](https://fernandomartin.surge.sh/)
+
 ## 🚀 Características
 - Página de inicio con presentación personal
 - Sección de experiencia profesional
