@@ -19,7 +19,6 @@ function App() {
   document.body.style.backgroundImage = themes[theme].gradientBg
   document.body.style.backgroundSize = 'cover'
   document.body.style.backgroundRepeat = 'no-repeat'
-  document.body.style.overscrollBehavior = 'none'
   document.body.style.transition = 'background 0.5s, color 0.5s'
   document.documentElement.style.transition = 'background 0.5s, color 0.5s'
   document.documentElement.style.setProperty('--navbar-bg', themes[theme].navbar + 'cc')
