@@ -1,4 +1,8 @@
 import '../css/Contacto.css'
+import downloadIcon from '../assets/download.png'
+import linkedinIcon from '../assets/linkedin.png'
+import mailIcon from '../assets/mail.png'
+import githubIcon from '../assets/github.png'
 
 export default function Contacto({ theme }) {
   return (
@@ -11,7 +15,7 @@ export default function Contacto({ theme }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/download.png" alt="CV" className="contacto-icon" style={{ filter: theme === 'dark' ? 'invert(1)' : 'none' }}/>
+          <img src={downloadIcon} alt="CV" className="contacto-icon" style={{ filter: theme === 'dark' ? 'invert(1)' : 'none' }}/>
           Descargar CV
         </a>
         <a
@@ -20,7 +24,7 @@ export default function Contacto({ theme }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/linkedin.png" alt="LinkedIn" className="contacto-icon" style={{ filter: theme === 'dark' ? 'invert(1)' : 'none' }} />
+          <img src={linkedinIcon} alt="LinkedIn" className="contacto-icon" style={{ filter: theme === 'dark' ? 'invert(1)' : 'none' }} />
           LinkedIn
         </a>
       </div>
@@ -31,7 +35,7 @@ export default function Contacto({ theme }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/mail.png" alt="Email" className="contacto-icon"             style={{ filter: theme === 'dark' ? 'invert(1)' : 'none' }}
+          <img src={mailIcon} alt="Email" className="contacto-icon"             style={{ filter: theme === 'dark' ? 'invert(1)' : 'none' }}
 />
           Correo electrónico
         </a>
@@ -42,7 +46,7 @@ export default function Contacto({ theme }) {
           rel="noopener noreferrer"
         >
           <img
-            src="/github.png"
+            src={githubIcon}
             alt="GitHub"
             className="contacto-icon"
             style={{ filter: theme === 'dark' ? 'invert(1)' : 'none' }}

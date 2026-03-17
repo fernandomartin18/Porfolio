@@ -1,5 +1,11 @@
 import React, { useEffect } from 'react'
 import '../css/Lovestory.css'
+import lovestory1 from '../assets/lovestory1.jpg'
+import lovestory2 from '../assets/lovestory2.jpg'
+import lovestory3 from '../assets/lovestory3.jpg'
+import lovestory4 from '../assets/lovestory4.jpg'
+import lovestory5 from '../assets/lovestory5.jpg'
+import lovestory6 from '../assets/lovestory6.jpg'
 
 export default function LoveStory() {
   useEffect(() => {
@@ -11,12 +17,12 @@ export default function LoveStory() {
   }
 
   const recuerdos = [
-    { src: '/lovestory1.jpg', texto: 'Ve los recuerdos y el contador' },
-    { src: '/lovestory2.jpg', texto: 'Mira el recuerdo y su descripción' },
-    { src: '/lovestory3.jpg', texto: 'Sube un nuevo recuerdo' },
-    { src: '/lovestory4.jpg', texto: 'Añade más fotos' },
-    { src: '/lovestory5.jpg', texto: 'Recorta la foto a tu gusto' },
-    { src: '/lovestory6.jpg', texto: 'Añade una descripción' },
+    { src: lovestory1, texto: 'Ve los recuerdos y el contador' },
+    { src: lovestory2, texto: 'Mira el recuerdo y su descripción' },
+    { src: lovestory3, texto: 'Sube un nuevo recuerdo' },
+    { src: lovestory4, texto: 'Añade más fotos' },
+    { src: lovestory5, texto: 'Recorta la foto a tu gusto' },
+    { src: lovestory6, texto: 'Añade una descripción' },
   ]
 
   return (

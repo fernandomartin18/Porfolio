@@ -1,4 +1,5 @@
 import '../css/SobreMi.css'
+import fotoCasual from '../assets/FotoCasual.jpg'
 
 export default function SobreMi() {
   return (
@@ -15,7 +16,7 @@ export default function SobreMi() {
         </p>
       </div>
       <div className="sobre-mi-foto">
-        <img src="./FotoCasual.jpg" alt="Foto personal" />
+        <img src={fotoCasual} alt="Foto personal" />
       </div>
     </div>
   )

@@ -1,3 +1,6 @@
+import lovestory from '../assets/lovestory.jpg'
+import catture from '../assets/catture.jpg'
+
 // Iconos SVG
 const iconos = {
   react: (
@@ -104,18 +107,7 @@ const iconos = {
 
 const proyectos = [
   {
-    foto: './catture.jpg',
-    enlace: 'https://catture.github.io/',
-    titulo: 'Catture',
-    tags: [
-      { nombre: 'Java', icono: iconos.java },
-      { nombre: 'Firebase', icono: iconos.firebase },
-      { nombre: 'ASfP', icono: iconos.androidstudio },
-    ],
-    descripcion: 'Aplicación móvil que sirve de red social para compartir con tus seguidores fotos de los gatos que has encontrado por la calle.',
-  },
-  {
-    foto: './lovestory.jpg',
+    foto: lovestory,
     enlace: '/lovestory',
     titulo: 'LoveStory',
     tags: [
@@ -126,24 +118,26 @@ const proyectos = [
     descripcion: 'Aplicación móvil en la que cada miembro de una pareja puede crear y ver recuerdos (un conjunto de fotos con descripción).',
   },
   {
-    foto: './buscadorpeliculas.jpg',
-    enlace: 'https://buscapelis.surge.sh/',
-    titulo: 'Buscador de Películas',
+    foto: lovestory,
+    enlace: '/lovestory',
+    titulo: 'LoveStory',
     tags: [
       { nombre: 'React', icono: iconos.react },
-      { nombre: 'OMDb API', icono: iconos.omdb }
+      { nombre: 'Firebase', icono: iconos.firebase },
+      { nombre: 'Cloudinary', icono: iconos.cloudinary }
     ],
-    descripcion: 'Aplicación web para buscar películas utilizando una API externa que devuelve resultados basados en los criterios de búsqueda.',
+    descripcion: 'Aplicación móvil en la que cada miembro de una pareja puede crear y ver recuerdos (un conjunto de fotos con descripción).',
   },
   {
-    foto: './traductor.jpg',
-    enlace: 'https://traductor.surge.sh/',
-    titulo: 'Traductor con IA',
+    foto: catture,
+    enlace: 'https://catture.github.io/',
+    titulo: 'Catture',
     tags: [
-      { nombre: 'React', icono: iconos.react },
-      { nombre: 'Cohere', icono: iconos.cohere },
+      { nombre: 'Java', icono: iconos.java },
+      { nombre: 'Firebase', icono: iconos.firebase },
+      { nombre: 'ASfP', icono: iconos.androidstudio },
     ],
-    descripcion: 'Aplicación web de traducción de texto que hace peticiones a la API de Cohere para obtener las traducciones.',
-  },
+    descripcion: 'Aplicación móvil que sirve de red social para compartir con tus seguidores fotos de los gatos que has encontrado por la calle.',
+  }
 ]
 export default proyectos
