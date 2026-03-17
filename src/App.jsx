@@ -3,6 +3,7 @@ import './css/App.css'
 import themes from './styles/themes'
 import { Routes, Route } from 'react-router-dom'
 import LoveStory from './pages/LoveStory.jsx'
+import Genesis from './pages/Genesis.jsx'
 import Home from './pages/Home.jsx'
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home theme={theme} toggleTheme={toggleTheme} />} />
+      <Route path="/genesis" element={<Genesis />} />
       <Route path="/lovestory" element={<LoveStory />} />
     </Routes>
   )
