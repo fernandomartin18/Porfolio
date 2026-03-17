@@ -1,4 +1,4 @@
-import genesis from '../assets/genesis.jpg'
+import genesis from '../assets/genesis2.jpg'
 import lovestory from '../assets/lovestory.jpg'
 import catture from '../assets/catture.jpg'
 
