@@ -43,7 +43,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home theme={theme} toggleTheme={toggleTheme} />} />
-      <Route path="/genesis" element={<Genesis />} />
+      <Route path="/genesis" element={<Genesis theme={theme} />} />
       <Route path="/lovestory" element={<LoveStory />} />
     </Routes>
   )
