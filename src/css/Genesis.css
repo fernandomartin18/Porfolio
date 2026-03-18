@@ -272,6 +272,33 @@
 
 
 @media (max-width: 768px) {
+  .genesis-header {
+    min-height: auto;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .genesis-container {
+    padding: 6rem 1.5rem 2rem; /* Reducido padding inferior */
+  }
+
+  .genesis-logo {
+    margin-bottom: 2rem;
+    /* Ajuste de margen horizontal visual */
+    padding: 0 1rem;
+  }
+
+  .genesis-subtitle {
+     text-align: left;
+  }
+
+  .genesis-section {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
   .genesis-cta {
     flex-direction: column;
     text-align: center;
@@ -284,10 +311,26 @@
     gap: 3rem;
     text-align: center;
   }
+
+  .genesis-cta-title {
+    font-size: 1.8rem; /* Tamaño reducido para móvil */
+  }
+
+  .genesis-cta-text {
+    max-width: 100%;
+    margin: 0;
+  }
   
   .genesis-cta-buttons {
     width: 100%;
     max-width: 100%;
+    align-items: center; /* Centrar botones */
+    margin-right: 0;
+  }
+
+  .genesis-footer {
+    margin-top: 0;
+    margin-bottom: 0;
   }
   
   .genesis-title {
@@ -299,21 +342,37 @@
   }
 
   .genesis-section {
-    flex-direction: column;
+    flex-direction: column !important;
     gap: 2rem;
     margin-bottom: 4rem;
-    text-align: center;
+    text-align: left;
+    display: flex; /* Asegura que la sección sea flex */
+    align-items: flex-start; /* Alineación izquierda */
+  }
+
+  /* Usar display contents para "romper" el div intermedio en mobile y reordenar */
+  .genesis-content {
+    display: contents;
   }
 
   .genesis-section.reverse {
-    flex-direction: column;
-  }
-
-  .genesis-image-container {
-    width: 100%;
+    flex-direction: column !important;
   }
 
   .genesis-section-title {
     font-size: 2rem;
+    order: 1; /* Título primero */
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .genesis-image-container {
+    width: 100%;
+    order: 2;
+  }
+
+  .genesis-text {
+    order: 3; /* Texto al final */
+    width: 100%;
   }
 }
