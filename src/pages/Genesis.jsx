@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import '../css/Genesis.css'
 import genesisBlack from '../assets/Genesis_Horizontal_Black.png'
 import genesisWhite from '../assets/Genesis_Horizontal_White.png'
-import genesisImg from '../assets/genesis.jpg'
+import genesisImg from '../assets/mockup mac.png'
 
 export default function Genesis({ theme }) {
   useEffect(() => {
