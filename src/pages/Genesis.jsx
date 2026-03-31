@@ -2,7 +2,17 @@ import React, { useEffect } from 'react'
 import '../css/Genesis.css'
 import genesisBlack from '../assets/Genesis_Horizontal_Black.png'
 import genesisWhite from '../assets/Genesis_Horizontal_White.png'
-import genesisImg from '../assets/mockup mac.png'
+import registroImg from '../assets/registro y login.png'
+import selectorImg from '../assets/selector llm.png'
+import chatImg from '../assets/chat.png'
+import barraCodigosImg from '../assets/barralateralcodigos.png'
+import visualizadorCodigoImg from '../assets/visualizador de codigo.png'
+import plantUMLImg from '../assets/chat con plantuml.png'
+import editorPlantUMLImg from '../assets/editor codigo.png'
+import editorDiagramasImg from '../assets/editor diagrama.png'
+import templateImg from '../assets/templates.png'
+import visorImagenesImg from '../assets/visualizar imagen.png'
+import ajustesImg from '../assets/panel ajustes.png'
 
 export default function Genesis({ theme }) {
   useEffect(() => {
@@ -30,21 +40,69 @@ export default function Genesis({ theme }) {
 
   const sections = [
     {
-      title: "Diseño Intuitivo",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      img: genesisImg,
+      title: "Guarda tus chats de forma segura",
+      text: "¡Explora la app sin compromisos! Pero si quieres guardar tus chats y tener una experiencia personalizada, crear una cuenta es la mejor opción. La seguridad es una prioridad: tu contraseña siempre estará cifrada y las sesiones se blindan utilizando el estándar de seguridad JWT.",
+      img: registroImg,
       reverse: false
     },
     {
-      title: "Funcionalidad Avanzada",
-      text: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      img: genesisImg,
+      title: "Modelos a la carta",
+      text: "Toma el control absoluto de cada interacción seleccionando tu modelo de lenguaje (LLM) favorito entre los que ya tengas descargados. ¿Buscas máxima eficiencia? Activa el Modo Automático. Esta función combina el poder de los modelos más avanzados en visión artificial y generación de código para interpretar tus diagramas y transformarlos en código fuente con gran fidelidad.",
+      img: selectorImg,
       reverse: true
     },
     {
-      title: "Experiencia de Usuario",
-      text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      img: genesisImg,
+      title: "Tu espacio de trabajo: ordenado e inteligente",
+      text: "Una experiencia de chat diseñada tanto para la estética como para la funcionalidad. Las respuestas con formato enriquecido facilitan el seguimiento de la información, mientras que la barra lateral ofrece una gestión total. Destaca conversaciones clave fijándolas en la parte superior, o utiliza la agrupación por proyectos para unificar el contexto de varios chats.",
+      img: chatImg,
+      reverse: false
+    },
+    {
+      title: "Código organizado: del chat a tu entorno local",
+      text: "Cuando la conversación genera código, la interfaz despliega automáticamente un panel lateral que centraliza todos los fragmentos creados para poder visualizarlos y descargarlos individualmente al instante. GENESIS también permite exportar todo el código a la vez en un archivo ZIP, manteniendo intacta la estructura de directorios y paquetes definida en el diagrama original.",
+      img: barraCodigosImg,
+      reverse: true
+    },
+    {
+      title: "Código con resaltado de sintaxis",
+      text: "Revisa los fragmentos de código sin salir de la aplicación. Gracias al resaltado de sintaxis integrado, la lectura es tan cómoda y clara como en un editor profesional. Esto facilita la comprensión, análisis y revisión de cada línea generada por la IA antes de exportarla.",
+      img: visualizadorCodigoImg,
+      reverse: false
+    },
+    {
+      title: "Validación estructural antes del código",
+      text: "Antes de escribir una sola línea de código, el sistema genera y muestra una representación en PlantUML del diagrama subido. Este paso intermedio de validación permite comprobar visualmente que la IA ha interpretado a la perfección la arquitectura y sus relaciones, garantizando así que el código final se ajuste exactamente al diseño original.",
+      img: plantUMLImg,
+      reverse: true
+    },
+    {
+      title: "Editor de código PlantUML",
+      text: "El diagrama no coincide exactamente con tu imagen? ¡No hay problema! Puedes editar el código PlantUML directamente en la aplicación. Ajusta los detalles para que todo encaje a la perfección, visualiza el resultado de los cambios en tiempo real y vuelve a generar el código con tus correcciones al instante.",
+      img: editorPlantUMLImg,
+      reverse: false
+    },
+    {
+      title: "Editor plantuml interactivo",
+      text: "No es necesario dominar la sintaxis de PlantUML para corregir errores. El editor interactivo proporciona un lienzo libre donde es posible agregar clases, agruparlas en paquetes y distribuir los componentes según los requisitos del proyecto. Permite configurar atributos y establecer relaciones de forma completamente gráfica e intuitiva.",
+      img: editorDiagramasImg,
+      reverse: true
+    },
+    {
+      title: "Plantillas para mejorar tus prompts",
+      text: "La calidad de los resultados generados por la IA depende de la claridad de las instrucciones. El sistema incluye un catálogo de plantillas diseñadas para estructurar y mejorar la redacción de los prompts. Esto garantiza que el LLM comprenda con exactitud los requerimientos técnicos, optimizando tanto la interpretación de diagramas complejos como la posterior generación de código.",
+      img: templateImg,
+      reverse: false
+    },
+    {
+      title: "Gestión multimedia precisa en cada chat",
+      text: "GENESIS ofrece una previsualización instantánea antes de confirmar cada envío, junto con un acceso rápido a todas las imágenes ya compartidas en el chat. Control visual absoluto sin interrumpir la conversación.",
+      img: visorImagenesImg,
+      reverse: true
+    },
+    {
+      title: "Tu entorno, tus reglas",
+      text: "Accede a un panel de ajustes diseñado para adaptar la aplicación a cualquier preferencia. Desde este espacio es posible personalizar los detalles de la cuenta, cambiar el tema visual para trabajar con mayor comodidad y gestionar la seguridad actualizando la contraseña en cualquier momento. Un entorno flexible pensado para ofrecer control absoluto.",
+      img: ajustesImg,
       reverse: false
     }
   ]
