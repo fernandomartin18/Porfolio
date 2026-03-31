@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { FiHeart, FiCamera, FiImage, FiSmile, FiGift, FiStar } from 'react-icons/fi'
 import '../css/Lovestory.css'
 import lovestory1 from '../assets/lovestory1.jpg'
 import lovestory2 from '../assets/lovestory2.jpg'
@@ -10,19 +11,32 @@ import lovestory6 from '../assets/lovestory6.jpg'
 export default function LoveStory() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible')
+        }
+      })
+    }, { threshold: 0.1 })
+
+    const sections = document.querySelectorAll('.lovestory-section')
+    sections.forEach((section) => observer.observe(section))
+
+    return () => observer.disconnect()
   }, [])
 
   const handleBack = () => {
-    window.history.back()
+    globalThis.history.back()
   }
 
-  const recuerdos = [
-    { src: lovestory1, texto: 'Ve los recuerdos y el contador' },
-    { src: lovestory2, texto: 'Mira el recuerdo y su descripción' },
-    { src: lovestory3, texto: 'Sube un nuevo recuerdo' },
-    { src: lovestory4, texto: 'Añade más fotos' },
-    { src: lovestory5, texto: 'Recorta la foto a tu gusto' },
-    { src: lovestory6, texto: 'Añade una descripción' },
+  const sections = [
+    { title: 'Nuestro comienzo', text: 'HolaMomentos especialesMomentos sMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especiales', img: lovestory1, icon: FiHeart, reverse: false },
+    { title: 'Momentos especiales', text: 'Hola', img: lovestory2, icon: FiCamera, reverse: true },
+    { title: 'Recuerdos guardados', text: 'Hola', img: lovestory3, icon: FiImage, reverse: false },
+    { title: 'Sonrisas infinitas', text: 'Hola', img: lovestory4, icon: FiSmile, reverse: true },
+    { title: 'Detalles que enamoran', text: 'Hola', img: lovestory5, icon: FiGift, reverse: false },
+    { title: 'Un brillo único', text: 'Hola', img: lovestory6, icon: FiStar, reverse: true },
   ]
 
   return (
@@ -52,27 +66,41 @@ export default function LoveStory() {
           transition: 'background 0.2s, color 0.2s',
         }}
       >
-        {/* Flecha izquierda SVG */}
         <svg width="20" height="20" viewBox="0 0 20 20" style={{ display: 'block' }}>
           <path d="M13 16L7 10L13 4" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
         Atrás
       </button>
+
       <div className="lovestory-container">
-        <h1 className="lovestory-title">LoveStory</h1>
-        <div className="lovestory-grid">
-          {recuerdos.map((recuerdo, i) => (
-            <div className="lovestory-item" key={i}>
-              <div className="lovestory-text">{recuerdo.texto}</div>
+        <header className="lovestory-header">
+          <h1 className="lovestory-title">LoveStory</h1>
+          <p className="lovestory-subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </header>
+
+        <main>
+          {sections.map((section) => (
+            <section key={section.title} className={`lovestory-section ${section.reverse ? 'reverse' : ''}`}>
+              <div className="lovestory-content">
+                <div className="lovestory-title-row">
+                  <section.icon className="lovestory-title-icon" aria-hidden="true" />
+                  <h2 className="lovestory-section-title">{section.title}</h2>
+                </div>
+                <p className="lovestory-text">{section.text}</p>
+              </div>
+              <div className="lovestory-image-container">
               <img
-                src={recuerdo.src}
-                alt={recuerdo.texto}
+                src={section.img}
+                alt={section.title}
                 className="lovestory-img"
                 loading="lazy"
               />
-            </div>
+              </div>
+            </section>
           ))}
-        </div>
+        </main>
       </div>
     </>
   )

@@ -1,88 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
 .lovestory-container {
-  max-width: 840px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+  padding: 4rem 1rem 3rem;
+  color: var(--text, #1d1d1f);
+}
+
+.lovestory-header {
+  text-align: center;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .lovestory-title {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 2.5rem;
-  color: var(--text, #222);
+  margin: 0;
+  font-size: 14rem;
+  font-family: 'Parisienne', cursive;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text, #1d1d1f);
 }
 
-.lovestory-grid {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem 1.5rem;
+.lovestory-subtitle {
+  margin: 0;
+  margin-top: 1rem;
+  max-width: 760px;
+  font-size: 1.35rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  color: var(--text, #1d1d1f);
 }
 
-.lovestory-item {
+.lovestory-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.lovestory-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lovestory-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.lovestory-content {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.lovestory-title-row {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 1.15rem;
+}
+
+.lovestory-title-icon {
+  color: #a855f7;
+  font-size: 3rem;
+  flex-shrink: 0;
+  display: block;
+  line-height: 1;
+  transform: translateY(-0.16em);
+}
+
+.lovestory-section-title {
+  margin: 0;
+  font-size: 4rem;
+  text-align: center;
+  line-height: 1.15;
+  font-family: 'Parisienne', cursive;
+  font-weight: 400;
+  color: var(--text, #1d1d1f);
 }
 
 .lovestory-text {
-  margin-bottom: 1rem;
-  margin-top: 2rem;
-  font-size: 1.08rem;
-  font-weight: 600;
-  color: var(--text, #222);
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
+  margin: 0;
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.82;
+  color: var(--text, #1d1d1f);
+}
+
+.lovestory-image-container {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.lovestory-section.reverse .lovestory-image-container {
+  justify-content: flex-start;
 }
 
 .lovestory-img {
   width: 100%;
-  aspect-ratio: 9/16;
+  max-width: 280px;
+  aspect-ratio: 9 / 18;
   object-fit: cover;
-  border-radius: 1.1rem;
-  box-shadow:
-    0 2px 16px 0 rgba(0,0,0,0.08),
-    0 0 0 4px var(--lovestory-glow, rgba(64, 224, 208, 0.13)),
-    0 0 16px 2px var(--lovestory-glow-strong, #40e0d0);
-  background: #eaeaea;
-  max-width: 260px;
+  border-radius: 0.9rem;
+  display: block;
+  transition: transform 0.28s ease;
+  will-change: transform;
 }
 
-@media (max-width: 900px) {
+@media (hover: hover) and (pointer: fine) {
+  .lovestory-img:hover {
+    transform: scale(1.04);
+  }
+}
+
+@media (max-width: 768px) {
   .lovestory-container {
-    padding: 2rem 0.5rem 2rem 0.5rem;
+    padding: 6rem 1.3rem 2rem;
   }
-  .lovestory-grid {
-    gap: 1.3rem 0.7rem;
-  }
-}
 
-@media (max-width: 700px) {
-  .lovestory-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem 0.7rem;
+  .lovestory-header {
+    min-height: auto;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    gap: 0.9rem;
   }
-}
 
-@media (max-width: 500px) {
-  .lovestory-container {
-    padding: 1.2rem 0.2rem 1.2rem 0.2rem;
-  }
   .lovestory-title {
-    font-size: 1.3rem;
-    margin-bottom: 1.2rem;
+    font-size: 3.4rem;
   }
-  .lovestory-grid {
-    grid-template-columns: 1fr;
-    gap: 1.1rem 0;
+
+  .lovestory-subtitle {
+    font-size: 1.05rem;
   }
+
+  .lovestory-section,
+  .lovestory-section.reverse {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.9rem;
+    margin-bottom: 3.2rem;
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .lovestory-content {
+    display: contents;
+  }
+
+  .lovestory-title-row {
+    order: 1;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.8rem;
+  }
+
+  .lovestory-section-title {
+    order: 1;
+    width: auto;
+    font-size: 2.2rem;
+    text-align: left;
+  }
+
+  .lovestory-title-icon {
+    font-size: 1.6rem;
+  }
+
+  .lovestory-image-container {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
   .lovestory-img {
-    max-width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .lovestory-text {
+    order: 3;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
   }
 }
