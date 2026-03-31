@@ -1,4 +1,17 @@
 import React, { useEffect } from 'react'
+import {
+  FiShield,
+  FiCpu,
+  FiMessageSquare,
+  FiFolder,
+  FiCode,
+  FiEdit3,
+  FiFileText,
+  FiImage,
+  FiSettings,
+} from 'react-icons/fi'
+import { BsDiagram2 } from 'react-icons/bs'
+import { SiUml } from 'react-icons/si'
 import '../css/Genesis.css'
 import genesisBlack from '../assets/Genesis_Horizontal_Black.png'
 import genesisWhite from '../assets/Genesis_Horizontal_White.png'
@@ -43,66 +56,77 @@ export default function Genesis({ theme }) {
       title: "Guarda tus chats de forma segura",
       text: "¡Explora la app sin compromisos! Pero si quieres guardar tus chats y tener una experiencia personalizada, crear una cuenta es la mejor opción. La seguridad es una prioridad: tu contraseña siempre estará cifrada y las sesiones se blindan utilizando el estándar de seguridad JWT.",
       img: registroImg,
+      icon: FiShield,
       reverse: false
     },
     {
       title: "Modelos a la carta",
       text: "Toma el control absoluto de cada interacción seleccionando tu modelo de lenguaje (LLM) favorito entre los que ya tengas descargados. ¿Buscas máxima eficiencia? Activa el Modo Automático. Esta función combina el poder de los modelos más avanzados en visión artificial y generación de código para interpretar tus diagramas y transformarlos en código fuente con gran fidelidad.",
       img: selectorImg,
+      icon: FiCpu,
       reverse: true
     },
     {
-      title: "Tu espacio de trabajo: ordenado e inteligente",
+      title: "Espacio ordenado e inteligente",
       text: "Una experiencia de chat diseñada tanto para la estética como para la funcionalidad. Las respuestas con formato enriquecido facilitan el seguimiento de la información, mientras que la barra lateral ofrece una gestión total. Destaca conversaciones clave fijándolas en la parte superior, o utiliza la agrupación por proyectos para unificar el contexto de varios chats.",
       img: chatImg,
+      icon: FiMessageSquare,
       reverse: false
     },
     {
       title: "Código organizado: del chat a tu entorno local",
       text: "Cuando la conversación genera código, la interfaz despliega automáticamente un panel lateral que centraliza todos los fragmentos creados para poder visualizarlos y descargarlos individualmente al instante. GENESIS también permite exportar todo el código a la vez en un archivo ZIP, manteniendo intacta la estructura de directorios y paquetes definida en el diagrama original.",
       img: barraCodigosImg,
+      icon: FiFolder,
       reverse: true
     },
     {
-      title: "Código con resaltado de sintaxis",
+      title: "Código con sintaxis resaltada",
       text: "Revisa los fragmentos de código sin salir de la aplicación. Gracias al resaltado de sintaxis integrado, la lectura es tan cómoda y clara como en un editor profesional. Esto facilita la comprensión, análisis y revisión de cada línea generada por la IA antes de exportarla.",
       img: visualizadorCodigoImg,
+      icon: FiCode,
       reverse: false
     },
     {
       title: "Validación estructural antes del código",
       text: "Antes de escribir una sola línea de código, el sistema genera y muestra una representación en PlantUML del diagrama subido. Este paso intermedio de validación permite comprobar visualmente que la IA ha interpretado a la perfección la arquitectura y sus relaciones, garantizando así que el código final se ajuste exactamente al diseño original.",
       img: plantUMLImg,
+      icon: SiUml,
       reverse: true
     },
     {
       title: "Editor de código PlantUML",
       text: "El diagrama no coincide exactamente con tu imagen? ¡No hay problema! Puedes editar el código PlantUML directamente en la aplicación. Ajusta los detalles para que todo encaje a la perfección, visualiza el resultado de los cambios en tiempo real y vuelve a generar el código con tus correcciones al instante.",
       img: editorPlantUMLImg,
+      icon: FiEdit3,
       reverse: false
     },
     {
       title: "Editor plantuml interactivo",
       text: "No es necesario dominar la sintaxis de PlantUML para corregir errores. El editor interactivo proporciona un lienzo libre donde es posible agregar clases, agruparlas en paquetes y distribuir los componentes según los requisitos del proyecto. Permite configurar atributos y establecer relaciones de forma completamente gráfica e intuitiva.",
       img: editorDiagramasImg,
+      icon: BsDiagram2,
       reverse: true
     },
     {
-      title: "Plantillas para mejorar tus prompts",
+      title: "Plantillas para prompts infalibles",
       text: "La calidad de los resultados generados por la IA depende de la claridad de las instrucciones. El sistema incluye un catálogo de plantillas diseñadas para estructurar y mejorar la redacción de los prompts. Esto garantiza que el LLM comprenda con exactitud los requerimientos técnicos, optimizando tanto la interpretación de diagramas complejos como la posterior generación de código.",
       img: templateImg,
+      icon: FiFileText,
       reverse: false
     },
     {
-      title: "Gestión multimedia precisa en cada chat",
+      title: "Gestión multimedia clara en chats",
       text: "GENESIS ofrece una previsualización instantánea antes de confirmar cada envío, junto con un acceso rápido a todas las imágenes ya compartidas en el chat. Control visual absoluto sin interrumpir la conversación.",
       img: visorImagenesImg,
+      icon: FiImage,
       reverse: true
     },
     {
-      title: "Tu entorno, tus reglas",
+      title: "Tu entorno,\ntus reglas",
       text: "Accede a un panel de ajustes diseñado para adaptar la aplicación a cualquier preferencia. Desde este espacio es posible personalizar los detalles de la cuenta, cambiar el tema visual para trabajar con mayor comodidad y gestionar la seguridad actualizando la contraseña en cualquier momento. Un entorno flexible pensado para ofrecer control absoluto.",
       img: ajustesImg,
+      icon: FiSettings,
       reverse: false
     }
   ]
@@ -153,7 +177,10 @@ export default function Genesis({ theme }) {
           {sections.map((section, index) => (
             <section key={index} className={`genesis-section ${section.reverse ? 'reverse' : ''}`}>
               <div className="genesis-content">
-                <h2 className="genesis-section-title">{section.title}</h2>
+                <div className="genesis-title-row">
+                  <section.icon className="genesis-title-icon" aria-hidden="true" />
+                  <h2 className="genesis-section-title">{section.title}</h2>
+                </div>
                 <p className="genesis-text">{section.text}</p>
               </div>
               <div className="genesis-image-container">
