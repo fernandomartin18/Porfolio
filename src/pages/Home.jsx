@@ -8,6 +8,9 @@ import SobreMi from '../components/SobreMi'
 import Contacto from '../components/Contacto'
 import proyectos from '../constantes/proyectos'
 import experiencias from '../constantes/experiencias'
+import developerIcon from '../assets/developer.png'
+import sobreMiIcon from '../assets/sobremi.png'
+import contactoIcon from '../assets/contacto.png'
 
 export default function Home({ theme, toggleTheme }) {
   const [activeSection, setActiveSection] = useState('inicio')
@@ -120,7 +123,7 @@ export default function Home({ theme, toggleTheme }) {
       >
         <div className="proyectos-container">
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '2rem', marginTop: '2rem' }}>
-            <img src="./developer.png" alt="Icono Proyectos" style={{ width: '32px', height: '32px', filter: theme === 'light' ? 'invert(1)' : 'none' }} />
+            <img src={developerIcon} alt="Icono Proyectos" style={{ width: '32px', height: '32px', filter: theme === 'light' ? 'invert(1)' : 'none' }} />
             <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: 0 }}>Proyectos</h1>
           </div>
           {proyectos.map((p, i) => (
@@ -147,7 +150,7 @@ export default function Home({ theme, toggleTheme }) {
       >
         <div className="proyectos-container">
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '2rem', marginTop: '2rem' }}>
-            <img src="./sobremi.png" alt="Icono Sobre Mí" style={{ width: '32px', height: '32px', filter: theme === 'dark' ? 'invert(1)' : 'none' }} />
+            <img src={sobreMiIcon} alt="Icono Sobre Mí" style={{ width: '32px', height: '32px', filter: theme === 'dark' ? 'invert(1)' : 'none' }} />
             <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: 0 }}>Sobre Mí</h1>
           </div>
           <SobreMi />
@@ -159,7 +162,7 @@ export default function Home({ theme, toggleTheme }) {
       >
         <div className="proyectos-container">
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem', marginBottom: '2rem', marginTop: '2rem' }}>
-            <img src="./contacto.png" alt="Icono Contacto" style={{ width: '32px', height: '32px', filter: theme === 'dark' ? 'invert(1)' : 'none' }} />
+            <img src={contactoIcon} alt="Icono Contacto" style={{ width: '32px', height: '32px', filter: theme === 'dark' ? 'invert(1)' : 'none' }} />
             <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: 0 }}>Contacto</h1>
           </div>
           <Contacto theme={theme} />

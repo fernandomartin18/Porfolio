@@ -1,9 +1,11 @@
 import React from 'react'
 import '../css/Navbar.css'
+import darkIcon from '../assets/dark.png'
+import lightIcon from '../assets/light.png'
 
 function Navbar({ theme, toggleTheme, scrollToSection, themes, activeSection }) {
   const isMobile = window.innerWidth < 500
-  const iconSrc = theme === 'light' ? './dark.png' : './light.png'
+  const iconSrc = theme === 'light' ? darkIcon : lightIcon
   const iconColor = themes[theme].navbarText
 
   return (

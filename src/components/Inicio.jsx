@@ -1,4 +1,5 @@
 import '../css/Inicio.css'
+import fotoProfesional from '../assets/FotoProfesional.jpeg'
 
 export default function Inicio() {
   return (
@@ -6,7 +7,7 @@ export default function Inicio() {
       {/* Escritorio */}
       <div className="inicio-row inicio-row-desktop">
         <img
-          src="/FotoProfesional.jpeg"
+          src={fotoProfesional}
           alt="Foto de Fernando Martín"
           className="inicio-foto"
         />
@@ -29,7 +30,7 @@ export default function Inicio() {
       <div className="inicio-row inicio-row-mobile">
         <div className="inicio-foto-btn-row">
           <img
-            src="/FotoProfesional.jpeg"
+            src={fotoProfesional}
             alt="Foto de Fernando Martín"
             className="inicio-foto"
           />

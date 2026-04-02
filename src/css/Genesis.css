@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&display=swap');
+
+.genesis-container {
+  padding: 6rem 1rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text, #1d1d1f);
+  background: transparent;
+}
+
+.genesis-header {
+  text-align: center;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.genesis-logo {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.genesis-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.genesis-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--text);
+  opacity: 0.8;
+  margin: 0;
+  max-width: 800px;
+}
+
+.genesis-section {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  margin-bottom: 6rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.genesis-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.genesis-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.genesis-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.genesis-section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+  font-family: 'Orbitron', 'Segoe UI', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: pre-wrap;
+}
+
+.genesis-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.genesis-title-icon {
+  color: #a855f7;
+  font-size: 2rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.35));
+}
+
+.genesis-text {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--text);
+  opacity: 0.8;
+  margin-left: 2.85rem;
+}
+
+.genesis-image-container {
+  flex: 1.5;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.genesis-screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.genesis-screenshot:hover {
+  transform: scale(1.02);
+}
+
+.genesis-footer {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.genesis-cta {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 4rem 3rem;
+  color: var(--text);
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(128, 128, 128, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+}
+
+.genesis-cta-columns {
+  display: flex;
+  width: 100%;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.genesis-cta-text-col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.genesis-cta.dark {
+  background: radial-gradient(circle at top, #2e1065 0%, #0f0518 100%);
+  color: white;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.genesis-cta.light {
+  background: radial-gradient(circle at top, #efe5fd 0%, #ffffff 100%);
+  color: #1d1d1f;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(147, 51, 234, 0.15);
+}
+
+.genesis-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: radial-gradient(circle at 10% 50%, rgba(168, 85, 247, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.genesis-cta-content {
+  flex: 1;
+}
+
+.genesis-cta-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+  color: inherit;
+  width: 100%;
+  font-family: 'Orbitron', 'Segoe UI', sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.genesis-cta-text {
+  font-size: 1.25rem;
+  color: inherit;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+  max-width: 480px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.genesis-cta.light .genesis-cta-text {
+  color: #000000;
+}
+
+.genesis-cta-buttons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-right: 3rem;
+}
+
+.genesis-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.genesis-cta-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.genesis-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.genesis-cta.dark .genesis-cta-btn.frontend {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.genesis-cta.dark .genesis-cta-btn.frontend:hover {
+  background: #ffffff;
+}
+
+.genesis-cta.dark .genesis-cta-btn.backend {
+  background: #8b5cf6;
+  color: white;
+}
+
+.genesis-cta.dark .genesis-cta-btn.backend:hover {
+  background: #7c3aed;
+}
+
+.genesis-cta.light .genesis-cta-btn.frontend {
+  background: #e8e8ed;
+  color: #1d1d1f;
+}
+
+.genesis-cta.light .genesis-cta-btn.frontend:hover {
+  background: #d2d2d7;
+}
+
+.genesis-cta.light .genesis-cta-btn.backend {
+  background: #8b5cf6;
+  color: white;
+}
+
+.genesis-cta.light .genesis-cta-btn.backend:hover {
+  background: #7c3aed;
+}
+
+
+@media (max-width: 768px) {
+  .genesis-header {
+    min-height: auto;
+    padding-top: 0;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .genesis-container {
+    padding: 6rem 1.5rem 2rem; /* Reducido padding inferior */
+  }
+
+  .genesis-logo {
+    margin-bottom: 2rem;
+    /* Ajuste de margen horizontal visual */
+    padding: 0 1rem;
+  }
+
+  .genesis-subtitle {
+     text-align: left;
+  }
+
+  .genesis-section {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .genesis-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    gap: 3rem;
+  }
+
+  .genesis-cta-columns {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .genesis-cta-title {
+    font-size: 1.3rem; /* Tamaño reducido para móvil */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .genesis-cta-text {
+    max-width: 100%;
+    margin: 0;
+  }
+  
+  .genesis-cta-buttons {
+    width: 100%;
+    max-width: 100%;
+    align-items: center; /* Centrar botones */
+    margin-right: 0;
+  }
+
+  .genesis-footer {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .genesis-title {
+    font-size: 2.5rem;
+  }
+  
+  .genesis-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .genesis-section {
+    flex-direction: column !important;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    text-align: left;
+    display: flex; /* Asegura que la sección sea flex */
+    align-items: flex-start; /* Alineación izquierda */
+  }
+
+  /* Usar display contents para "romper" el div intermedio en mobile y reordenar */
+  .genesis-content {
+    display: contents;
+  }
+
+  .genesis-section.reverse {
+    flex-direction: column !important;
+  }
+
+  .genesis-section-title {
+    font-size: 1.7rem;
+    order: 1; /* Título primero */
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .genesis-title-row {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .genesis-title-icon {
+    font-size: 1.45rem;
+  }
+
+  .genesis-image-container {
+    width: 100%;
+    order: 2;
+  }
+
+  .genesis-text {
+    order: 3; /* Texto al final */
+    width: 100%;
+    margin-left: 0;
+  }
+}

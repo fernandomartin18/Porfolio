@@ -29,9 +29,10 @@
   flex: 1 1 50%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  justify-content: space-evenly;
+  padding: 0.5rem 1.5rem;
   gap: 1rem;
+  min-height: 270px;
 }
 
 .proyecto-titulo-link {
@@ -40,23 +41,24 @@
 }
 
 .proyecto-titulo {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  margin: 0 0 0.5rem 0;
+  margin: 0.5rem 0 0 0;
   color: inherit;
+  text-align: center;
 }
 
 .proyecto-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-  margin-bottom: 0.5rem;
+  display: block;
+  text-align: center;
 }
 
 .proyecto-tag {
   display: inline-flex;
   align-items: center;
   padding: 0.35rem 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   border-radius: 1.2rem;
   background: transparent;
   color: var(--text, #222);
@@ -84,6 +86,7 @@
   font-size: 1.1rem;
   color: var(--text, #222);
   line-height: 1.6;
+  text-align: justify;
 }
 
 .proyectos-container {
@@ -101,6 +104,9 @@
     flex-direction: column;
     border-radius: 1.2rem;
   }
+  .proyecto-content {
+    min-height: auto;
+  }
   .proyecto-img-link {
     flex: none;
     width: 100%;
@@ -116,7 +122,8 @@
     gap: 0.7rem;
   }
   .proyecto-titulo {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
+    margin-bottom: 0.7rem;
   }
   .proyecto-tag {
     font-size: 0.9rem;

@@ -3,6 +3,7 @@ import './css/App.css'
 import themes from './styles/themes'
 import { Routes, Route } from 'react-router-dom'
 import LoveStory from './pages/LoveStory.jsx'
+import Genesis from './pages/Genesis.jsx'
 import Home from './pages/Home.jsx'
 
 function App() {
@@ -19,7 +20,6 @@ function App() {
   document.body.style.backgroundImage = themes[theme].gradientBg
   document.body.style.backgroundSize = 'cover'
   document.body.style.backgroundRepeat = 'no-repeat'
-  document.body.style.overscrollBehavior = 'none'
   document.body.style.transition = 'background 0.5s, color 0.5s'
   document.documentElement.style.transition = 'background 0.5s, color 0.5s'
   document.documentElement.style.setProperty('--navbar-bg', themes[theme].navbar + 'cc')
@@ -43,6 +43,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home theme={theme} toggleTheme={toggleTheme} />} />
+      <Route path="/genesis" element={<Genesis theme={theme} />} />
       <Route path="/lovestory" element={<LoveStory />} />
     </Routes>
   )
