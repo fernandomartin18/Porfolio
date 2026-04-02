@@ -1,12 +1,25 @@
 import React, { useEffect } from 'react'
-import { FiHeart, FiCamera, FiImage, FiSmile, FiGift, FiStar } from 'react-icons/fi'
+import { FiMap } from 'react-icons/fi'
+import { RiGalleryView2 } from 'react-icons/ri'
+import { WiStars } from 'react-icons/wi'
+import { MdHistoryEdu, MdOutlineAddBox, MdEdit } from 'react-icons/md'
+import { IoIosImages } from 'react-icons/io'
+import { IoInformationCircleOutline } from 'react-icons/io5'
+import { FaCropSimple } from 'react-icons/fa6'
+import { BsFilm } from 'react-icons/bs'
+import { FaHistory } from 'react-icons/fa'
 import '../css/Lovestory.css'
-import lovestory1 from '../assets/lovestory1.jpg'
-import lovestory2 from '../assets/lovestory2.jpg'
-import lovestory3 from '../assets/lovestory3.jpg'
-import lovestory4 from '../assets/lovestory4.jpg'
-import lovestory5 from '../assets/lovestory5.jpg'
-import lovestory6 from '../assets/lovestory6.jpg'
+import crearRecuerdoAbajo from '../assets/crear recuerdo abajo.png'
+import crearRecuerdoAdd from '../assets/crear recuerdo añadir foto.png'
+import crearRecuerdoArriba from '../assets/crear recuerdo arriba.png'
+import editarImagen from '../assets/editar imagen.png'
+import editarRecuerdo from '../assets/editar recuerdo.png'
+import inicio from '../assets/inicio.png'
+import mapa from '../assets/mapa.png'
+import peliculasPorVer from '../assets/peliculas por ver.png'
+import peliculasVistas from '../assets/peliculas vistas.png'
+import verRecuerdoAbajo from '../assets/ver recuerdo abajo.png'
+import verRecuerdoArriba from '../assets/ver recuerdo arriba.png'
 
 export default function LoveStory() {
   useEffect(() => {
@@ -31,12 +44,17 @@ export default function LoveStory() {
   }
 
   const sections = [
-    { title: 'Nuestro comienzo', text: 'HolaMomentos especialesMomentos sMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especialesMomentos especiales', img: lovestory1, icon: FiHeart, reverse: false },
-    { title: 'Momentos especiales', text: 'Hola', img: lovestory2, icon: FiCamera, reverse: true },
-    { title: 'Recuerdos guardados', text: 'Hola', img: lovestory3, icon: FiImage, reverse: false },
-    { title: 'Sonrisas infinitas', text: 'Hola', img: lovestory4, icon: FiSmile, reverse: true },
-    { title: 'Detalles que enamoran', text: 'Hola', img: lovestory5, icon: FiGift, reverse: false },
-    { title: 'Un brillo único', text: 'Hola', img: lovestory6, icon: FiStar, reverse: true },
+    { title: 'Galería de recuerdos', text: 'En la parte superior de la pantalla de inicio destaca un contador de días que registra el tiempo transcurrido en la relación junto a los nombres y fotografías de perfil de ambos usuarios. Bajo este encabezado, se despliega una galería de recuerdos organizada cronológicamente. Cada entrada permite visualizar la imagen de portada del recuerdo junto a su título, creando un diario visual colaborativo que facilita el acceso rápido a cada momento special compartido.', img: inicio, icon: RiGalleryView2, reverse: false },
+    { title: 'Cada momento, al detalle', text: 'Al seleccionar cualquier recuerdo de la galería, se abre una nueva pantalla donde las imágenes se presentan en un carrusel a pantalla completa para una visualización inmersiva. Justo debajo del contenido visual, la interfaz muestra el nombre y la foto de perfil del miembro de la pareja que realizó la publicación, acompañado del título de la historia. Además, el sistema integra de forma accesible las opciones de edición y eliminación, permitiendo gestionar y actualizar cada recuerdo compartido de manera sencilla.', img: verRecuerdoArriba, icon: WiStars, reverse: true },
+    { title: 'El relato de lo vivido', text: 'Tras el contenido visual y los detalles del autor, la interfaz presenta el relato escrito del recuerdo, permitiendo profundizar en la historia que acompaña a las imágenes. Finalmente, al final del scroll, se incluye la ubicación exacta donde transcurrió el momento, geolocalizando cada experiencia para completar el contexto total de la memoria compartida.', img: verRecuerdoAbajo, icon: MdHistoryEdu, reverse: false },
+    { title: 'Creación de nuevos recuerdos', text: 'La barra de navegación inferior integra un botón de "Nuevo recuerdo", diseñado para iniciar el proceso de publicación de forma inmediata. Al pulsarlo, el sistema dirige a una interfaz de carga donde es posible añadir múltiples imágenes desde el dispositivo. Antes de finalizar la publicación, el usuario cuenta con total flexibilidad para editar cada archivo o retirar imágenes específicas del carrusel, garantizando que el recuerdo final refleje exactamente la experiencia compartida.', img: crearRecuerdoAdd, icon: MdOutlineAddBox, reverse: true },
+    { title: 'Control de la narrativa', text: 'Dentro de la interfaz de creación y edición, el sistema permite reordenar las imágenes del carrusel con solo arrastrarlas, facilitando el diseño de la secuencia perfecta para cada historia. Asimismo, se ofrece la libertad de seleccionar la imagen de portada que representará el recuerdo en la galería principal. Aunque la aplicación asigna por defecto la primera foto del carrusel como miniatura, el usuario puede elegir manualmente cualquier otra imagen para que sea la cara visible del recuerdo en el inicio.', img: crearRecuerdoArriba, icon: IoIosImages, reverse: false },
+    { title: 'Detalles del recuerdo', text: 'Bajo el carrusel de imágenes, la interfaz de creación dispone de una serie de campos diseñados para completar la información del momento. En primer lugar, se encuentran los espacios para escribir el título y redactar el relato detallado de la historia. A continuación, el usuario cuenta con un selector de autoría para indicar quién realiza la publicación, seguido de un selector de fecha preciso. Por último, se incluye un módulo de ubicación que ofrece la flexibilidad de utilizar la posición actual mediante GPS o buscar manualmente un lugar específico para situar el recuerdo en el mapa.', img: crearRecuerdoAbajo, icon: IoInformationCircleOutline, reverse: true },
+    { title: 'Ajuste de imágenes', text: 'El proceso de creación incluye herramientas de edición integradas para garantizar que cada fotografía luzca perfecta. Antes de publicar, el usuario puede acceder a funciones para recortar y girar las imágenes, permitiendo ajustar el encuadre o corregir la orientación de los archivos directamente desde la aplicación, sin necesidad de recurrir a editores externos.', img: editarImagen, icon: FaCropSimple, reverse: false },
+    { title: 'Refinad vuestros recuerdos', text: 'Si un recuerdo necesita ajustes, la opción de editar permite acceder a una interfaz equivalente a la de creación para modificar cualquier detalle. En esta pantalla, es posible añadir, eliminar o reordenar las imágenes del carrusel, así como actualizar el título, la descripción, la fecha y la ubicación. No obstante, para mantener la integridad del registro histórico, el sistema mantiene fijo al miembro que realizó la publicación, asegurando que siempre quede constancia de quién fue el autor original del recuerdo.', img: editarRecuerdo, icon: MdEdit, reverse: true },
+    { title: 'Vuestro mapa de aventuras.', text: 'La barra de navegación incluye un acceso directo a un mapa interactivo que geolocaliza visualmente cada momento compartido. Para mantener la claridad visual, el sistema emplea una función de agrupación inteligente: cuando existen varios recuerdos en una misma zona, se muestran en un único punto con un indicador numérico. Al ampliar el zoom, los puntos se expanden para revelar la foto de portada de cada recuerdo individual. Finalmente, al interactuar con cualquiera de estas imágenes, la aplicación redirige directamente a la visualización completa del contenido para revivir la experiencia.', img: mapa, icon: FiMap, reverse: false },
+    { title: 'Cartelera personalizada', text: 'La barra de navegación incorpora un apartado dedicado a la gestión de películas pendientes, ideal para organizar vuestras sesiones de cine en casa. A través de un buscador integrado, es posible localizar cualquier título y añadirlo a una lista visual que incluye la portada oficial de cada filme. Para mantener el listado actualizado, cada entrada dispone de controles directos que permiten marcar la película como vista o retirarla definitivamente de la selección, facilitando la elección del próximo estreno para disfrutar en pareja.', img: peliculasPorVer, icon: BsFilm, reverse: true },
+    { title: 'Historial cinematográfico', text: 'Mediante un sencillo gesto de deslizar a la derecha, la interfaz permite alternar a la pestaña de películas vistas, donde se almacena un registro cronológico de todos los títulos ya disfrutados. Esta sección actúa como un archivo personal de vuestras sesiones de cine, manteniendo la flexibilidad de gestión gracias a un botón de eliminación individual. Así, el historial se mantiene siempre a vuestro gusto, permitiendo descartar cualquier entrada que no se desee conservar en la lista definitiva.', img: peliculasVistas, icon: FaHistory, reverse: false },
   ]
 
   return (
@@ -76,7 +94,7 @@ export default function LoveStory() {
         <header className="lovestory-header">
           <h1 className="lovestory-title">LoveStory</h1>
           <p className="lovestory-subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Vuestra historia de amor merece algo más que un carrete olvidado. Cread vuestro refugio privado para revivir cada momento juntos.
           </p>
         </header>
 

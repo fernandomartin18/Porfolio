@@ -29,7 +29,7 @@
 
 .lovestory-subtitle {
   margin: 0;
-  margin-top: 1rem;
+  margin-top: 3rem;
   max-width: 760px;
   font-size: 1.35rem;
   line-height: 1.6;
@@ -69,8 +69,9 @@
 .lovestory-title-row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 1.15rem;
+  padding-left: 4.2rem;
 }
 
 .lovestory-title-icon {
@@ -85,7 +86,7 @@
 .lovestory-section-title {
   margin: 0;
   font-size: 4rem;
-  text-align: center;
+  text-align: left;
   line-height: 1.15;
   font-family: 'Parisienne', cursive;
   font-weight: 400;
@@ -95,6 +96,7 @@
 .lovestory-text {
   margin: 0;
   margin-top: 3rem;
+  padding-left: 4.2rem;
   font-size: 1.2rem;
   line-height: 1.6;
   opacity: 0.82;
@@ -143,7 +145,7 @@
   }
 
   .lovestory-title {
-    font-size: 3.4rem;
+    font-size: 4rem;
   }
 
   .lovestory-subtitle {
@@ -172,17 +174,20 @@
     width: 100%;
     justify-content: flex-start;
     gap: 0.8rem;
+    position: static;
+    padding-left: 0;
   }
 
   .lovestory-section-title {
     order: 1;
     width: auto;
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: left;
   }
 
   .lovestory-title-icon {
     font-size: 1.6rem;
+    position: static;
   }
 
   .lovestory-image-container {
@@ -194,7 +199,7 @@
 
   .lovestory-img {
     max-width: 280px;
-    margin: 0 auto;
+    margin: 1rem auto;
   }
 
   .lovestory-text {
@@ -202,5 +207,6 @@
     width: 100%;
     margin-top: 0;
     margin-left: 0;
+    padding-left: 0;
   }
 }
