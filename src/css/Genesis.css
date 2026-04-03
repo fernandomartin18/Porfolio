@@ -302,9 +302,10 @@
   }
 
   .genesis-logo {
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 2rem;
-    /* Ajuste de margen horizontal visual */
-    padding: 0 1rem;
+    padding: 0;
   }
 
   .genesis-subtitle {

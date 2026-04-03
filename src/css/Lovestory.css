@@ -145,11 +145,20 @@
   }
 
   .lovestory-title {
-    font-size: 4rem;
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(5rem, 18vw, 8rem);
+    line-height: 0.95;
+    text-align: center;
   }
 
   .lovestory-subtitle {
+    width: 100%;
+    max-width: 100%;
     font-size: 1.05rem;
+    text-align: left;
+    margin-top: 1.5 rem;
+    margin-bottom: 2rem;
   }
 
   .lovestory-section,
