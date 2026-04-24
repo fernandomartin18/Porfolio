@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import {
   FiShield,
   FiCpu,
@@ -139,6 +140,30 @@ export default function Genesis({ theme }) {
 
   return (
     <>
+      <Helmet>
+        <title>Genesis | Fernando Martín</title>
+        <meta
+          name="description"
+          content="Proyecto Genesis. Aplicación web de generación automática de código cuántico-clásico mediante IA multimodal. TFG de Fernando Martín."
+        />
+        <link
+          rel="canonical"
+          href="https://fernandomartin.tech/genesis"
+        />
+        <meta property="og:title" content="Genesis | Fernando Martín" />
+        <meta
+          property="og:description"
+          content="Aplicación web de generación automática de código cuántico-clásico mediante IA multimodal."
+        />
+        <meta
+          property="og:url"
+          content="https://fernandomartin.tech/genesis"
+        />
+        <meta
+          property="og:image"
+          content="https://fernandomartin.tech/assets/genesis2-C3od9KuN.jpg"
+        />
+      </Helmet>
       <button
         onClick={handleBack}
         style={{

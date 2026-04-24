@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { FiMap } from 'react-icons/fi'
 import { RiGalleryView2 } from 'react-icons/ri'
 import { WiStars } from 'react-icons/wi'
@@ -59,6 +60,30 @@ export default function LoveStory() {
 
   return (
     <>
+      <Helmet>
+        <title>LoveStory | Fernando Martín</title>
+        <meta
+          name="description"
+          content="LoveStory. Aplicación móvil para crear y compartir recuerdos en pareja. Desarrollada por Fernando Martín."
+        />
+        <link
+          rel="canonical"
+          href="https://fernandomartin.tech/lovestory"
+        />
+        <meta property="og:title" content="LoveStory | Fernando Martín" />
+        <meta
+          property="og:description"
+          content="Aplicación móvil para crear y compartir recuerdos especiales en pareja."
+        />
+        <meta
+          property="og:url"
+          content="https://fernandomartin.tech/lovestory"
+        />
+        <meta
+          property="og:image"
+          content="https://fernandomartin.tech/assets/lovestory--INHWcfa.jpg"
+        />
+      </Helmet>
       {/* Botón Atrás fijo arriba a la izquierda */}
       <button
         onClick={handleBack}
