@@ -26,8 +26,14 @@ import editorDiagramasImg from '../assets/editor diagrama.png'
 import templateImg from '../assets/templates.png'
 import visorImagenesImg from '../assets/visualizar imagen.png'
 import ajustesImg from '../assets/panel ajustes.png'
+import { preloadGenesisImages } from '../utils/preloadGenesisAssets'
 
 export default function Genesis({ theme }) {
+  useEffect(() => {
+    const cleanup = preloadGenesisImages()
+    return cleanup
+  }, [])
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
     
@@ -169,6 +175,9 @@ export default function Genesis({ theme }) {
             src={theme === 'light' ? genesisBlack : genesisWhite} 
             alt="Genesis Logo" 
             className="genesis-logo" 
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
           />
           <p className="genesis-subtitle">Aplicación web de generación automática de código cuántico-clásico mediante Inteligencia Artificial multimodal. Desarrollada como Trabajo de Fin de Grado y fruto de una Beca de Colaboración del Ministerio con el Departamento de Tecnologías y Sistemas de Información de la Universidad de Castilla La Mancha.</p>
         </header>
@@ -184,7 +193,14 @@ export default function Genesis({ theme }) {
                 <p className="genesis-text">{section.text}</p>
               </div>
               <div className="genesis-image-container">
-                <img src={section.img} alt={section.title} className="genesis-screenshot" />
+                <img
+                  src={section.img}
+                  alt={section.title}
+                  className="genesis-screenshot"
+                  loading={index < 2 ? 'eager' : 'lazy'}
+                  fetchPriority={index < 2 ? 'high' : 'auto'}
+                  decoding="async"
+                />
               </div>
             </section>
           ))}

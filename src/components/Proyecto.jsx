@@ -1,9 +1,17 @@
-import { useRef, useState, useEffect } from 'react'
 import '../css/Proyecto.css'
 import { Link } from 'react-router-dom'
+import { preloadGenesisImages } from '../utils/preloadGenesisAssets'
 
 export default function Proyecto({ foto, enlace, titulo, tags, descripcion }) {
   const isInternal = enlace.startsWith('/')
+  const shouldPreloadGenesis = enlace === '/genesis'
+
+  const handleWarmup = () => {
+    if (!shouldPreloadGenesis) {
+      return
+    }
+    preloadGenesisImages()
+  }
 
   const LinkOrA = isInternal ? Link : 'a'
   const linkProps = isInternal
@@ -12,11 +20,23 @@ export default function Proyecto({ foto, enlace, titulo, tags, descripcion }) {
 
   return (
     <div className="proyecto-card">
-      <LinkOrA {...linkProps} className="proyecto-img-link">
+      <LinkOrA
+        {...linkProps}
+        className="proyecto-img-link"
+        onMouseEnter={handleWarmup}
+        onFocus={handleWarmup}
+        onTouchStart={handleWarmup}
+      >
         <img src={foto} alt={titulo} className="proyecto-img" />
       </LinkOrA>
       <div className="proyecto-content">
-        <LinkOrA {...linkProps} className="proyecto-titulo-link">
+        <LinkOrA
+          {...linkProps}
+          className="proyecto-titulo-link"
+          onMouseEnter={handleWarmup}
+          onFocus={handleWarmup}
+          onTouchStart={handleWarmup}
+        >
           <h2 className="proyecto-titulo">{titulo}</h2>
         </LinkOrA>
         <div className="proyecto-tags">
@@ -31,7 +51,13 @@ export default function Proyecto({ foto, enlace, titulo, tags, descripcion }) {
             </span>
           ))}
         </div>
-        <LinkOrA {...linkProps} className="proyecto-desc-link">
+        <LinkOrA
+          {...linkProps}
+          className="proyecto-desc-link"
+          onMouseEnter={handleWarmup}
+          onFocus={handleWarmup}
+          onTouchStart={handleWarmup}
+        >
           <p className="proyecto-descripcion">{descripcion}</p>
         </LinkOrA>
       </div>
