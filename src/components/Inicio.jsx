@@ -49,9 +49,9 @@ export default function Inicio() {
         </div>
       </div>
       <p className="inicio-descripcion">
-          Soy <b className="primary-bold">estudiante de cuarto año de Ingeniería Informática</b>.
-          Me especializo en el <b className="primary-bold">desarrollo web</b> y de <b className="primary-bold">aplicaciones móviles</b>.
-          Disfruto enfrentar desafíos que me permitan aprender continuamente y aplicar mis conocimientos para ofrecer soluciones.
+          Estudiante de último año de <b className="primary-bold">Ingeniería Informática</b>.
+          Me apasiona <b className="primary-bold">resolver problemas</b> a través de soluciones tecnológicas sólidas, priorizando siempre la <b className="primary-bold">eficiencia</b> y las <b className="primary-bold">buenas prácticas</b>.
+          Soy una persona versátil que disfruta del <b className="primary-bold">aprendizaje continuo</b>, con gran capacidad para adaptarme a <b className="primary-bold">nuevos stacks tecnológicos</b> y aportar una <b className="primary-bold">visión técnica integral</b> en proyectos desafiantes.
       </p>
     </div>
   )

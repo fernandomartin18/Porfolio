@@ -41,7 +41,8 @@
   color: var(--text);
   opacity: 0.8;
   margin: 0;
-  max-width: 800px;
+  max-width: 80%;
+  text-align: justify;
 }
 
 .genesis-section {
@@ -347,7 +348,13 @@
   }
 
   .genesis-subtitle {
-     text-align: left;
+    text-align: left;
+    max-width: 100%;
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--text);
+    opacity: 0.8;
   }
 
   .genesis-section {

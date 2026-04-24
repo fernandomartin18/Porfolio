@@ -170,7 +170,7 @@ export default function Genesis({ theme }) {
             alt="Genesis Logo" 
             className="genesis-logo" 
           />
-          <p className="genesis-subtitle">Aplicación web de generación automática de código cuántico-clásico mediante Inteligencia Artificial multimodal.</p>
+          <p className="genesis-subtitle">Aplicación web de generación automática de código cuántico-clásico mediante Inteligencia Artificial multimodal. Desarrollada como Trabajo de Fin de Grado y fruto de una Beca de Colaboración del Ministerio con el Departamento de Tecnologías y Sistemas de Información de la Universidad de Castilla La Mancha.</p>
         </header>
 
         <main>
