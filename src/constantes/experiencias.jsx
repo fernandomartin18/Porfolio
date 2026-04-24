@@ -1,9 +1,9 @@
 const experiencias = [
   {
-    puesto: 'Desarrollador Web',
-    empresa: 'EBORATIC',
-    fecha: 'Sep 2025 - Actualidad',
-    descripcion: 'Responsable del desarrollo y mantenimiento de aplicaciones web corporativas y de eventos vinculados a la empresa, utilizando tecnologías como JavaScript y frameworks modernos.',
+    puesto: 'Investigador Becado (Beca de Colaboración del Ministerio)',
+    empresa: 'Universidad de Castilla-La Mancha',
+    fecha: 'Oct 2025 - Actualidad',
+    descripcion: 'Desarrollo de GENESIS: Aplicación web para la generación automática de código cuántico-clásico utilizando Inteligencia Artificial multimodal. Investigación sobre computación cuántica y modelos de IA.',
   },
   {
     puesto: 'Becario de Desarrollo de Software',

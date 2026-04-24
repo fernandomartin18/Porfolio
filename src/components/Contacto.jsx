@@ -3,6 +3,7 @@ import downloadIcon from '../assets/download.png'
 import linkedinIcon from '../assets/linkedin.png'
 import mailIcon from '../assets/mail.png'
 import githubIcon from '../assets/github.png'
+import cvPdf from '../assets/CVFernandoMartín.pdf'
 
 export default function Contacto({ theme }) {
   return (
@@ -10,7 +11,7 @@ export default function Contacto({ theme }) {
       <div className="contacto-row">
         <a
           className="contacto-btn"
-          href="/CV_Fernando_Martin.pdf"
+          href={cvPdf}
           download
           target="_blank"
           rel="noopener noreferrer"
