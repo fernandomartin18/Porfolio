@@ -190,6 +190,20 @@ export default function Genesis({ theme }) {
           ))}
         </main>
 
+        <section className="genesis-video-block" aria-label="Video demostracion de Genesis">
+          <h2 className="genesis-video-title">Video demostración de GENESIS</h2>
+          <div className="genesis-video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/_kcWj5R8cRs?si=b5uayuXadWTtlWfm"
+              title="Video demostración de GENESIS"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+        </section>
+
         <footer className="genesis-footer">
           <div className={`genesis-cta ${theme}`}>
             <h2 className="genesis-cta-title">¿Quieres explorar GENESIS tu mismo?</h2>
