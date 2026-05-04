@@ -84,37 +84,6 @@ export default function LoveStory() {
           content="https://fernandomartin.tech/assets/lovestory--INHWcfa.jpg"
         />
       </Helmet>
-      {/* Botón Atrás fijo arriba a la izquierda */}
-      <button
-        onClick={handleBack}
-        style={{
-          position: 'fixed',
-          top: '1.2rem',
-          left: '1.2rem',
-          zIndex: 200,
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.5rem',
-          padding: '0.5rem 1.2rem 0.5rem 0.9rem',
-          borderRadius: '1.2rem',
-          background: 'var(--navbar-bg, #fffccc)',
-          color: 'var(--navbar-text, #222)',
-          border: '1px solid rgba(142, 141, 141, 0.35)',
-          boxShadow: 'var(--navbar-shadow, 0 2px 16px rgba(0,0,0,0.307))',
-          backdropFilter: 'blur(8px)',
-          WebkitBackdropFilter: 'blur(8px)',
-          fontWeight: 500,
-          fontSize: '1rem',
-          cursor: 'pointer',
-          transition: 'background 0.2s, color 0.2s',
-        }}
-      >
-        <svg width="20" height="20" viewBox="0 0 20 20" style={{ display: 'block' }}>
-          <path d="M13 16L7 10L13 4" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-        Atrás
-      </button>
-
       <div className="lovestory-container">
         <header className="lovestory-header">
           <h1 className="lovestory-title">LoveStory</h1>

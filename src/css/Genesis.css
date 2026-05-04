@@ -84,7 +84,7 @@
 
 .genesis-title-row {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 0.85rem;
 }
 
@@ -93,6 +93,7 @@
   font-size: 2rem;
   flex-shrink: 0;
   filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.35));
+  padding-top: 2px;
 }
 
 .genesis-text {
@@ -127,6 +128,9 @@
 }
 
 .genesis-video-title {
+  display: inline-flex;
+  align-items: start;
+  gap: 0.85rem;
   font-size: 2rem;
   font-weight: 700;
   margin: 0 0 1.25rem;
@@ -135,6 +139,13 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-align: center;
+  width: 100%;
+}
+
+.genesis-video-title-icon {
+  flex-shrink: 0;
+  color: #a855f7;
+  padding-top: 3px;
 }
 
 .genesis-video-wrapper {
@@ -249,7 +260,6 @@
   margin-bottom: 1rem;
   max-width: 480px;
   line-height: 1.6;
-  text-align: justify;
 }
 
 .genesis-cta.light .genesis-cta-text {
@@ -385,6 +395,7 @@
   .genesis-cta-text {
     max-width: 100%;
     margin: 0;
+    text-align: start;
   }
   
   .genesis-cta-buttons {
@@ -404,9 +415,9 @@
   }
 
   .genesis-video-title {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     margin-bottom: 2rem;
-    text-align: left;
+    text-align: start;
   }
   
   .genesis-title {
