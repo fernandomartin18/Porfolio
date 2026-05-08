@@ -156,7 +156,7 @@ const proyectos = [
   },
   {
     foto: catture,
-    enlace: 'https://catture.github.io/',
+    enlace: '/catture',
     titulo: 'Catture',
     tags: [
       { nombre: 'Java', icono: iconos.java },

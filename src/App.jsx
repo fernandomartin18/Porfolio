@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom'
 import LoveStory from './pages/LoveStory.jsx'
 import Genesis from './pages/Genesis.jsx'
 import Home from './pages/Home.jsx'
+import Catture from './pages/Catture.jsx'
 
 function App() {
   const getPreferredTheme = () =>
@@ -45,6 +46,7 @@ function App() {
       <Route path="/" element={<Home theme={theme} toggleTheme={toggleTheme} />} />
       <Route path="/genesis" element={<Genesis theme={theme} />} />
       <Route path="/lovestory" element={<LoveStory />} />
+      <Route path="/catture" element={<Catture theme={theme} />} />
     </Routes>
   )
 }

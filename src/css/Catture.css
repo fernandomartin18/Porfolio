@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap');
+
+.catture-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 1rem 3rem;
+  color: var(--text);
+}
+
+.catture-header {
+  text-align: center;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.catture-title {
+  margin: 0;
+  font-size: 14rem;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  color: var(--text);
+}
+
+.catture-tagline {
+  margin: 0;
+  margin-top: -1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.8;
+  color: var(--text, #1d1d1f);
+}
+
+.catture-subtitle {
+  margin: 0;
+  margin-top: 2rem;
+  max-width: 760px;
+  font-size: 1.35rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  color: var(--text, #1d1d1f);
+}
+
+.catture-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.catture-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.catture-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.catture-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.catture-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.15rem;
+  padding-left: 4.2rem;
+}
+
+.catture-title-icon {
+  color: #a855f7;
+  font-size: 3rem;
+  flex-shrink: 0;
+  display: block;
+  line-height: 1;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+}
+
+.catture-section-title {
+  margin: 0;
+  font-size: 3rem;
+  text-align: left;
+  line-height: 1.15;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 400;
+  color: var(--text, #1d1d1f);
+}
+
+.catture-text {
+  margin: 0;
+  margin-top: 3rem;
+  padding-left: 4.2rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.82;
+  color: var(--text, #1d1d1f);
+}
+
+.catture-image-container {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.catture-section.reverse .catture-image-container {
+  justify-content: flex-start;
+}
+
+.catture-img {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 0.9rem;
+  border: 2px solid #a955f75d;
+  display: block;
+  transition: transform 0.28s ease;
+  will-change: transform;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .catture-img:hover {
+    transform: scale(1.04);
+  }
+}
+
+@media (max-width: 768px) {
+  .catture-container {
+    padding: 6rem 1.3rem 2rem;
+  }
+
+  .catture-header {
+    min-height: auto;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    gap: 0.9rem;
+  }
+
+  .catture-title {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(5rem, 18vw, 8rem);
+    line-height: 0.95;
+    text-align: center;
+  }
+  .catture-tagline {
+    font-size: 1rem;
+    margin-top: -0.8rem;
+  }
+
+  .catture-subtitle {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1.05rem;
+    text-align: left;
+    margin-top: 1.5 rem;
+    margin-bottom: 2rem;
+  }
+
+  .catture-section,
+  .catture-section.reverse {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.9rem;
+    margin-bottom: 3.2rem;
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .catture-content {
+    display: contents;
+  }
+
+  .catture-title-row {
+    order: 1;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    position: static;
+    padding-left: 0;
+  }
+
+  .catture-section-title {
+    order: 1;
+    width: auto;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .catture-title-icon {
+    font-size: 1.6rem;
+    position: static;
+  }
+
+  .catture-image-container {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .catture-img {
+    max-width: 280px;
+    margin: 1rem auto;
+  }
+
+  .catture-text {
+    order: 3;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
