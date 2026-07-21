@@ -2,7 +2,7 @@ const experiencias = [
   {
     puesto: 'Investigador Becado (Beca de Colaboración del Ministerio)',
     empresa: 'Universidad de Castilla-La Mancha',
-    fecha: 'Oct 2025 - Actualidad',
+    fecha: 'Oct 2025 - Jun 2026',
     descripcion: 'Desarrollo de GENESIS: Aplicación web para la generación automática de código cuántico-clásico utilizando Inteligencia Artificial multimodal. Investigación sobre computación cuántica y modelos de IA.',
   },
   {
