@@ -13,6 +13,7 @@ export default function Inicio() {
         />
         <div className="inicio-info">
           <div className="inicio-row-top">
+            {/*
             <a
               href="https://www.linkedin.com/in/fernando-mart%C3%ADn-mart%C3%ADn-032a71338/"
               target="_blank"
@@ -20,6 +21,7 @@ export default function Inicio() {
             >
               <button className="disponible-btn">Disponible para trabajar</button>
             </a>
+            */}
           </div>
           <div className="inicio-row-bottom">
             <h1 className="inicio-titulo">¡Hola! Soy Fernando 👋</h1>
@@ -34,6 +36,7 @@ export default function Inicio() {
             alt="Foto de Fernando Martín"
             className="inicio-foto"
           />
+          {/*
           <a
             href="https://www.linkedin.com/in/fernando-mart%C3%ADn-mart%C3%ADn-032a71338/"
             target="_blank"
@@ -41,6 +44,7 @@ export default function Inicio() {
           >
             <button className="disponible-btn">Disponible para trabajar</button>
           </a>
+          */}
         </div>
         <div className="inicio-info">
           <div className="inicio-row-bottom">
